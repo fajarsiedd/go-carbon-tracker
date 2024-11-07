@@ -1,0 +1,39 @@
+package base
+
+import (
+	"go-carbon-tracker/entities"
+	"time"
+
+	"github.com/google/uuid"
+	"gorm.io/gorm"
+)
+
+type Base struct {
+	ID        string         `json:"id" gorm:"primaryKey"`
+	CreatedAt time.Time      `json:"created_at"`
+	UpdatedAt time.Time      `json:"updated_at"`
+	DeletedAt gorm.DeletedAt `json:"deleted_at" gorm:"index"`
+}
+
+func (base *Base) BeforeCreate(tx *gorm.DB) (err error) {
+	base.ID = uuid.New().String()
+	return
+}
+
+func (Base) FromEntity(baseEntity entities.Base) Base {
+	return Base{
+		ID:        baseEntity.ID,
+		CreatedAt: baseEntity.CreatedAt,
+		UpdatedAt: baseEntity.UpdatedAt,
+		DeletedAt: baseEntity.DeletedAt,
+	}
+}
+
+func (base Base) ToEntity() entities.Base {
+	return entities.Base{
+		ID:        base.ID,
+		CreatedAt: base.CreatedAt,
+		UpdatedAt: base.UpdatedAt,
+		DeletedAt: base.DeletedAt,
+	}
+}
