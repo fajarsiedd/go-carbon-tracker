@@ -2,12 +2,16 @@ package routes
 
 import (
 	authHandler "go-carbon-tracker/handlers/auth"
+	vehicleHandler "go-carbon-tracker/handlers/vehicle"
 	"go-carbon-tracker/middlewares"
 	authRepo "go-carbon-tracker/repositories/auth"
+	vehicleRepo "go-carbon-tracker/repositories/vehicle"
 	authUsecase "go-carbon-tracker/usecases/auth"
+	vehicleUsecase "go-carbon-tracker/usecases/vehicle"
 	"os"
 	"time"
 
+	echojwt "github.com/labstack/echo-jwt/v4"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"gorm.io/gorm"
@@ -45,17 +49,32 @@ func InitRoutes(e *echo.Echo, db *gorm.DB) {
 		ExpiresDuration: 1,
 	}
 
-	// authMiddlewareConfig := jwtConfig.Init()
+	authMiddlewareConfig := jwtConfig.Init()
 
-	authRoute(e, db, &jwtConfig)
+	useAuthRoute(e, db, &jwtConfig)
+
+	useVehicleRoute(e, db, authMiddlewareConfig)
 }
 
-func authRoute(e *echo.Echo, db *gorm.DB, jwtConfig *middlewares.JWTConfig) {
-	authRepo := authRepo.NewAuthRepository(db)
-	authUsecase := authUsecase.NewAuthUsecase(authRepo, jwtConfig)
-	authHandler := authHandler.NewAuthHandler(authUsecase)
+func useAuthRoute(e *echo.Echo, db *gorm.DB, jwtConfig *middlewares.JWTConfig) {
+	repository := authRepo.NewAuthRepository(db)
+	usecase := authUsecase.NewAuthUsecase(repository, jwtConfig)
+	handler := authHandler.NewAuthHandler(usecase)
 
-	wishlist := e.Group("/api/v1/auth")
-	wishlist.POST("/login", authHandler.Login)
-	wishlist.POST("/register", authHandler.Register)
+	auth := e.Group("/api/v1")
+	auth.POST("/login", handler.Login)
+	auth.POST("/register", handler.Register)
+}
+
+func useVehicleRoute(e *echo.Echo, db *gorm.DB, authMiddlewareConfig echojwt.Config) {
+	repository := vehicleRepo.NewVehicleRepository(db)
+	usecase := vehicleUsecase.NewVehicleUsecase(repository)
+	handler := vehicleHandler.NewVehicleHandler(usecase)
+
+	vehicles := e.Group("/api/v1/vehicles", echojwt.WithConfig(authMiddlewareConfig))
+	vehicles.GET("", handler.GetAll)
+	vehicles.GET("/:id", handler.GetByID)
+	vehicles.POST("", handler.Create)
+	vehicles.PUT("/:id", handler.Update)
+	vehicles.DELETE("/:id", handler.Delete)
 }

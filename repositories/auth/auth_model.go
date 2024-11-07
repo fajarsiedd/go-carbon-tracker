@@ -4,14 +4,16 @@ import (
 	"go-carbon-tracker/entities"
 	"go-carbon-tracker/repositories/base"
 	"go-carbon-tracker/repositories/trip"
+	"go-carbon-tracker/repositories/vehicle"
 )
 
 type User struct {
 	base.Base
-	Name     string        `json:"name"`
-	Email    string        `json:"email" gorm:"unique"`
-	Password string        `json:"password"`
-	Trips    trip.ListTrip `json:"trips,omitempty"`
+	Name     string
+	Email    string `gorm:"unique"`
+	Password string
+	Trips    trip.ListTrip
+	Vehicles vehicle.ListVehicle
 }
 
 func (user User) FromEntity(userEntity entities.User) User {
@@ -20,6 +22,8 @@ func (user User) FromEntity(userEntity entities.User) User {
 		Name:     userEntity.Name,
 		Email:    userEntity.Email,
 		Password: userEntity.Password,
+		Trips:    trip.ListTrip{}.FromListEntity(userEntity.Trips),
+		Vehicles: vehicle.ListVehicle{}.FromListEntity(userEntity.Vehicles),
 	}
 }
 
@@ -29,5 +33,7 @@ func (user User) ToEntity() entities.User {
 		Name:     user.Name,
 		Email:    user.Email,
 		Password: user.Password,
+		Trips:    user.Trips.ToListEntity(),
+		Vehicles: user.Vehicles.ToListEntity(),
 	}
 }

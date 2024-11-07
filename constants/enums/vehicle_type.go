@@ -1,4 +1,4 @@
-package constants
+package enums
 
 import "database/sql/driver"
 

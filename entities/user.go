@@ -7,4 +7,5 @@ type User struct {
 	Password string
 	Token    string
 	Trips    []Trip
+	Vehicles []Vehicle
 }

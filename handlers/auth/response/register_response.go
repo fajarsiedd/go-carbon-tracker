@@ -2,7 +2,7 @@ package response
 
 import (
 	"go-carbon-tracker/entities"
-	"go-carbon-tracker/repositories/base"
+	"go-carbon-tracker/handlers/base"
 )
 
 type RegisterResponse struct {

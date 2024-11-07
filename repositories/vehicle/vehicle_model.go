@@ -1,7 +1,7 @@
 package vehicle
 
 import (
-	"go-carbon-tracker/constants"
+	"go-carbon-tracker/constants/enums"
 	"go-carbon-tracker/entities"
 	"go-carbon-tracker/repositories/base"
 	"go-carbon-tracker/repositories/trip"
@@ -9,9 +9,12 @@ import (
 
 type Vehicle struct {
 	base.Base
-	VehicleType    constants.VehicleType `json:"vehicle_type" gorm:"type:enum('MOBIL', 'BUS', 'TRUK', 'MOTOR');column:vehicle_type"`
-	EmissionFactor float32               `json:"emission_factor" gorm:"type:decimal(10,3)"`
-	Trips          trip.ListTrip         `json:"trips,omitempty"`
+	Name           string            `gorm:"size:191"`
+	VehicleType    enums.VehicleType `gorm:"type:enum('MOBIL', 'BUS', 'TRUK', 'MOTOR');column:vehicle_type"`
+	FuelType       enums.FuelType    `gorm:"type:enum('SOLAR', 'PREMIUM');column:fuel_type"`
+	EmissionFactor float32           `gorm:"type:decimal(10,3)"`
+	UserID         string            `gorm:"size:191"`
+	Trips          trip.ListTrip
 }
 
 type ListVehicle []Vehicle
@@ -19,28 +22,34 @@ type ListVehicle []Vehicle
 func (vehicle Vehicle) FromEntity(vehicleEntity entities.Vehicle) Vehicle {
 	return Vehicle{
 		Base:           vehicle.Base.FromEntity(vehicleEntity.Base),
-		VehicleType:    constants.VehicleType(vehicleEntity.VehicleType),
+		Name:           vehicleEntity.Name,
+		VehicleType:    vehicleEntity.VehicleType,
+		FuelType:       vehicleEntity.FuelType,
 		EmissionFactor: vehicleEntity.EmissionFactor,
 		Trips:          trip.ListTrip{}.FromListEntity(vehicleEntity.Trips),
+		UserID:         vehicleEntity.UserID,
 	}
 }
 
 func (vehicle Vehicle) ToEntity() entities.Vehicle {
 	return entities.Vehicle{
 		Base:           vehicle.Base.ToEntity(),
-		VehicleType:    constants.VehicleType(vehicle.VehicleType),
+		Name:           vehicle.Name,
+		VehicleType:    vehicle.VehicleType,
+		FuelType:       vehicle.FuelType,
 		EmissionFactor: vehicle.EmissionFactor,
 		Trips:          vehicle.Trips.ToListEntity(),
+		UserID:         vehicle.UserID,
 	}
 }
 
-func FromListEntity(vehicleEntity []entities.Vehicle) ListVehicle {
+func (ListVehicle) FromListEntity(vehicleEntity []entities.Vehicle) ListVehicle {
 	listVehicle := ListVehicle{}
 
-	for _, v := range vehicleEntity {
-		vehicle := Vehicle{}.FromEntity(v)
+	vehicle := Vehicle{}
 
-		listVehicle = append(listVehicle, vehicle)
+	for _, v := range vehicleEntity {
+		listVehicle = append(listVehicle, vehicle.FromEntity(v))
 	}
 
 	return listVehicle

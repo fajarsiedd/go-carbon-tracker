@@ -2,7 +2,7 @@ package vehicle
 
 import "go-carbon-tracker/entities"
 
-type VehicleRepository interface {
+type VehicleUsecase interface {
 	GetAll() ([]entities.Vehicle, error)
 	GetByID(id string) (entities.Vehicle, error)
 	Create(vehicle entities.Vehicle) (entities.Vehicle, error)
