@@ -2,15 +2,18 @@ package routes
 
 import (
 	authHandler "go-carbon-tracker/handlers/auth"
+	tripHandler "go-carbon-tracker/handlers/trip"
 	vehicleHandler "go-carbon-tracker/handlers/vehicle"
 	"go-carbon-tracker/middlewares"
 	authRepo "go-carbon-tracker/repositories/auth"
+	tripRepo "go-carbon-tracker/repositories/trip"
 	vehicleRepo "go-carbon-tracker/repositories/vehicle"
 	authUsecase "go-carbon-tracker/usecases/auth"
+	tripUsecase "go-carbon-tracker/usecases/trip"
 	vehicleUsecase "go-carbon-tracker/usecases/vehicle"
 	"os"
 	"time"
-	
+
 	echojwt "github.com/labstack/echo-jwt/v4"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
@@ -54,6 +57,8 @@ func InitRoutes(e *echo.Echo, db *gorm.DB) {
 	useAuthRoute(e, db, &jwtConfig)
 
 	useVehicleRoute(e, db, authMiddlewareConfig)
+
+	useTripRoute(e, db, authMiddlewareConfig)
 }
 
 func useAuthRoute(e *echo.Echo, db *gorm.DB, jwtConfig *middlewares.JWTConfig) {
@@ -77,4 +82,18 @@ func useVehicleRoute(e *echo.Echo, db *gorm.DB, authMiddlewareConfig echojwt.Con
 	vehicles.POST("", handler.Create)
 	vehicles.PUT("/:id", handler.Update)
 	vehicles.DELETE("/:id", handler.Delete)
+}
+
+func useTripRoute(e *echo.Echo, db *gorm.DB, authMiddlewareConfig echojwt.Config) {
+	vehicleRepository := vehicleRepo.NewVehicleRepository(db)
+	tripRepository := tripRepo.NewTripRepository(db)
+	usecase := tripUsecase.NewTripUsecase(tripRepository, vehicleRepository)
+	handler := tripHandler.NewTripHandler(usecase)
+
+	trips := e.Group("/api/v1/trips", echojwt.WithConfig(authMiddlewareConfig))
+	trips.GET("", handler.GetAll)
+	trips.GET("/:id", handler.GetByID)
+	trips.POST("", handler.Create)
+	trips.PUT("/:id", handler.Update)
+	trips.DELETE("/:id", handler.Delete)
 }
