@@ -1,0 +1,3220 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>enums: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">go-carbon-tracker/constants/enums/fuel_type.go (0.0%)</option>
+				
+				<option value="file1">go-carbon-tracker/constants/enums/vehicle_type.go (0.0%)</option>
+				
+				<option value="file2">go-carbon-tracker/database/config.go (0.0%)</option>
+				
+				<option value="file3">go-carbon-tracker/database/migration.go (0.0%)</option>
+				
+				<option value="file4">go-carbon-tracker/handlers/auth/auth_handler.go (0.0%)</option>
+				
+				<option value="file5">go-carbon-tracker/handlers/auth/request/login_request.go (0.0%)</option>
+				
+				<option value="file6">go-carbon-tracker/handlers/auth/request/register_request.go (0.0%)</option>
+				
+				<option value="file7">go-carbon-tracker/handlers/auth/response/login_response.go (0.0%)</option>
+				
+				<option value="file8">go-carbon-tracker/handlers/auth/response/register_response.go (0.0%)</option>
+				
+				<option value="file9">go-carbon-tracker/handlers/base/base.go (0.0%)</option>
+				
+				<option value="file10">go-carbon-tracker/handlers/base/response_wrapper.go (0.0%)</option>
+				
+				<option value="file11">go-carbon-tracker/handlers/trip/request/trip_request.go (0.0%)</option>
+				
+				<option value="file12">go-carbon-tracker/handlers/trip/response/trip_response.go (0.0%)</option>
+				
+				<option value="file13">go-carbon-tracker/handlers/trip/trip_handler.go (0.0%)</option>
+				
+				<option value="file14">go-carbon-tracker/handlers/vehicle/request/vehicle_request.go (0.0%)</option>
+				
+				<option value="file15">go-carbon-tracker/handlers/vehicle/response/vehicle_response.go (0.0%)</option>
+				
+				<option value="file16">go-carbon-tracker/handlers/vehicle/vehicle_handler.go (0.0%)</option>
+				
+				<option value="file17">go-carbon-tracker/main.go (0.0%)</option>
+				
+				<option value="file18">go-carbon-tracker/middlewares/auth.go (35.3%)</option>
+				
+				<option value="file19">go-carbon-tracker/middlewares/limiter.go (0.0%)</option>
+				
+				<option value="file20">go-carbon-tracker/middlewares/log.go (0.0%)</option>
+				
+				<option value="file21">go-carbon-tracker/middlewares/validator.go (0.0%)</option>
+				
+				<option value="file22">go-carbon-tracker/mocks/repositories/auth/AuthRepository.go (60.6%)</option>
+				
+				<option value="file23">go-carbon-tracker/mocks/repositories/trip/TripRepository.go (40.5%)</option>
+				
+				<option value="file24">go-carbon-tracker/mocks/repositories/vehicle/VehicleRepository.go (67.6%)</option>
+				
+				<option value="file25">go-carbon-tracker/mocks/usecases/auth/AuthUsecase.go (0.0%)</option>
+				
+				<option value="file26">go-carbon-tracker/mocks/usecases/trip/TripUsecase.go (0.0%)</option>
+				
+				<option value="file27">go-carbon-tracker/mocks/usecases/vehicle/VehicleUsecase.go (0.0%)</option>
+				
+				<option value="file28">go-carbon-tracker/models/auth_model.go (0.0%)</option>
+				
+				<option value="file29">go-carbon-tracker/models/base.go (0.0%)</option>
+				
+				<option value="file30">go-carbon-tracker/models/trip_model.go (0.0%)</option>
+				
+				<option value="file31">go-carbon-tracker/models/vehicle_model.go (0.0%)</option>
+				
+				<option value="file32">go-carbon-tracker/repositories/auth/auth_repository_impl.go (0.0%)</option>
+				
+				<option value="file33">go-carbon-tracker/repositories/trip/trip_repository_impl.go (0.0%)</option>
+				
+				<option value="file34">go-carbon-tracker/repositories/vehicle/vehicle_repository_impl.go (0.0%)</option>
+				
+				<option value="file35">go-carbon-tracker/routes/routes.go (0.0%)</option>
+				
+				<option value="file36">go-carbon-tracker/usecases/auth/auth_usecase_impl.go (90.9%)</option>
+				
+				<option value="file37">go-carbon-tracker/usecases/trip/trip_usecase_impl.go (21.7%)</option>
+				
+				<option value="file38">go-carbon-tracker/usecases/vehicle/vehicle_usecase_impl.go (100.0%)</option>
+				
+				<option value="file39">go-carbon-tracker/utils/emission_factor.go (40.0%)</option>
+				
+				<option value="file40">go-carbon-tracker/utils/filter.go (0.0%)</option>
+				
+				<option value="file41">go-carbon-tracker/utils/gemini_ai.go (0.0%)</option>
+				
+				<option value="file42">go-carbon-tracker/utils/google_maps.go (0.0%)</option>
+				
+				<option value="file43">go-carbon-tracker/utils/password.go (78.6%)</option>
+				
+				<option value="file44">go-carbon-tracker/utils/status_code_mapper.go (0.0%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package enums
+
+import "database/sql/driver"
+
+type FuelType string
+
+const (
+        PREMIUM FuelType = "PREMIUM"
+        SOLAR   FuelType = "SOLAR"
+)
+
+func (vt *FuelType) Scan(value interface{}) error <span class="cov0" title="0">{
+        *vt = FuelType(value.([]byte))
+        return nil
+}</span>
+
+func (vt FuelType) Value() (driver.Value, error) <span class="cov0" title="0">{
+        return string(vt), nil
+}</span>
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package enums
+
+import "database/sql/driver"
+
+type VehicleType string
+
+const (
+        MOBIL VehicleType = "MOBIL"
+        BUS   VehicleType = "BUS"
+        TRUK  VehicleType = "TRUK"
+        MOTOR VehicleType = "MOTOR"
+)
+
+func (vt *VehicleType) Scan(value interface{}) error <span class="cov0" title="0">{
+        *vt = VehicleType(value.([]byte))
+        return nil
+}</span>
+
+func (vt VehicleType) Value() (driver.Value, error) <span class="cov0" title="0">{
+        return string(vt), nil
+}</span>
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package database
+
+import (
+        "fmt"
+        "os"
+
+        "gorm.io/driver/mysql"
+        "gorm.io/gorm"
+)
+
+func InitDB() (*gorm.DB, error) <span class="cov0" title="0">{
+        var dsn string = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&amp;parseTime=True&amp;loc=Local",
+                os.Getenv("DB_USERNAME"),
+                os.Getenv("DB_PASSWORD"),
+                os.Getenv("DB_HOST"),
+                os.Getenv("DB_PORT"),
+                os.Getenv("DB_NAME"),
+        )
+
+        db, err := gorm.Open(mysql.Open(dsn), &amp;gorm.Config{})
+
+        if err != nil </span><span class="cov0" title="0">{
+                panic("failed to connect database")</span>
+        }
+
+        <span class="cov0" title="0">return db, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">package database
+
+import (
+        "go-carbon-tracker/models"
+
+        "gorm.io/gorm"
+)
+
+func MigrateDB(db *gorm.DB) <span class="cov0" title="0">{
+        db.AutoMigrate(&amp;models.User{}, &amp;models.Location{}, &amp;models.Trip{}, &amp;models.Vehicle{})
+
+        // Add table suffix when creating tables
+        db.Set("gorm:table_options", "ENGINE=InnoDB").AutoMigrate(&amp;models.User{}, &amp;models.Location{}, &amp;models.Trip{}, &amp;models.Vehicle{})
+}</span>
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">package auth
+
+import (
+        "go-carbon-tracker/constants"
+        "go-carbon-tracker/handlers/auth/request"
+        "go-carbon-tracker/handlers/auth/response"
+        "go-carbon-tracker/handlers/base"
+        "go-carbon-tracker/usecases/auth"
+
+        "github.com/labstack/echo/v4"
+)
+
+type authHandler struct {
+        usecase auth.AuthUsecase
+}
+
+func NewAuthHandler(usecase auth.AuthUsecase) *authHandler <span class="cov0" title="0">{
+        return &amp;authHandler{
+                usecase: usecase,
+        }
+}</span>
+
+func (handler authHandler) Login(c echo.Context) error <span class="cov0" title="0">{
+        req := request.LoginRequest{}
+
+        if err := c.Bind(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">if err := c.Validate(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">result, err := handler.usecase.Login(req.ToEntity())
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.LOGIN_SUCCESS, response.LoginResponse{}.FromEntity(result))</span>
+}
+
+func (handler authHandler) Register(c echo.Context) error <span class="cov0" title="0">{
+        req := request.RegisterRequest{}
+
+        if err := c.Bind(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">if err := c.Validate(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">result, err := handler.usecase.Register(req.ToEntity())
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.REGISTER_SUCCESS, response.RegisterResponse{}.FromEntity(result))</span>
+}
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">package request
+
+import "go-carbon-tracker/entities"
+
+type LoginRequest struct {
+        Email    string `json:"email" validate:"required,email"`
+        Password string `json:"password" validate:"required"`
+}
+
+func (loginRequest LoginRequest) ToEntity() entities.User <span class="cov0" title="0">{
+        return entities.User{
+                Email:    loginRequest.Email,
+                Password: loginRequest.Password,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file6" style="display: none">package request
+
+import "go-carbon-tracker/entities"
+
+type RegisterRequest struct {
+        Name     string `json:"name" validate:"required"`
+        Email    string `json:"email" validate:"required,email"`
+        Password string `json:"password" validate:"required"`
+}
+
+func (registerRequest RegisterRequest) ToEntity() entities.User <span class="cov0" title="0">{
+        return entities.User{
+                Name:     registerRequest.Name,
+                Email:    registerRequest.Email,
+                Password: registerRequest.Password,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package response
+
+import (
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/handlers/base"
+)
+
+type LoginResponse struct {
+        base.Base
+        Name        string `json:"name"`
+        Email       string `json:"email"`
+        AccessToken string `json:"access_token"`
+}
+
+func (loginResponse LoginResponse) FromEntity(user entities.User) LoginResponse <span class="cov0" title="0">{
+        return LoginResponse{
+                Base:        loginResponse.Base.FromEntity(user.Base),
+                Name:        user.Name,
+                Email:       user.Email,
+                AccessToken: user.Token,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file8" style="display: none">package response
+
+import (
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/handlers/base"
+)
+
+type RegisterResponse struct {
+        base.Base
+        Name  string `json:"name"`
+        Email string `json:"email"`
+}
+
+func (registerResponse RegisterResponse) FromEntity(user entities.User) RegisterResponse <span class="cov0" title="0">{
+        return RegisterResponse{
+                Base:  registerResponse.Base.FromEntity(user.Base),
+                Name:  user.Name,
+                Email: user.Email,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file9" style="display: none">package base
+
+import (
+        "go-carbon-tracker/entities"
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Base struct {
+        ID        string         `json:"id"`
+        CreatedAt time.Time      `json:"created_at"`
+        UpdatedAt time.Time      `json:"updated_at"`
+        DeletedAt gorm.DeletedAt `json:"deleted_at"`
+}
+
+func (Base) FromEntity(baseEntity entities.Base) Base <span class="cov0" title="0">{
+        return Base{
+                ID:        baseEntity.ID,
+                CreatedAt: baseEntity.CreatedAt,
+                UpdatedAt: baseEntity.UpdatedAt,
+                DeletedAt: baseEntity.DeletedAt,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file10" style="display: none">package base
+
+import (
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/utils"
+        "net/http"
+        "strings"
+
+        "github.com/labstack/echo/v4"
+)
+
+type Meta struct {
+        Status  bool   `json:"status"`
+        Code    int    `json:"code"`
+        Message string `json:"message,omitempty"`
+        Error   string `json:"error,omitempty"`
+}
+
+type Pagination struct {
+        Page       int `json:"page"`
+        Limit      int `json:"limit"`
+        TotalPages int `json:"total_pages"`
+        TotalItems int `json:"total_items"`
+}
+
+type ResponseWrapper struct {
+        Meta Meta `json:"meta"`
+        Data any  `json:"data,omitempty"`
+}
+
+type ResponsePaginationWrapper struct {
+        Meta       Meta       `json:"meta"`
+        Data       any        `json:"data,omitempty"`
+        Pagination Pagination `json:"pagination"`
+}
+
+func SuccesResponse(c echo.Context, message string, data any) error <span class="cov0" title="0">{
+        statusCode := utils.GetStatusCodeBySuccessMessage(message)
+
+        return c.JSON(statusCode, ResponseWrapper{
+                Meta: Meta{
+                        Status:  true,
+                        Code:    statusCode,
+                        Message: message,
+                },
+                Data: data,
+        })
+}</span>
+
+func SuccesResponsePagination(c echo.Context, message string, pagination entities.Pagination, data any) error <span class="cov0" title="0">{
+        statusCode := utils.GetStatusCodeBySuccessMessage(message)
+
+        return c.JSON(statusCode, ResponsePaginationWrapper{
+                Meta: Meta{
+                        Status:  true,
+                        Code:    statusCode,
+                        Message: message,
+                },
+                Data: data,
+                Pagination: Pagination{
+                        Page:       pagination.Page,
+                        Limit:      pagination.Limit,
+                        TotalPages: pagination.TotalPages,
+                        TotalItems: pagination.TotalItems,
+                },
+        })
+}</span>
+
+func ErrorResponse(c echo.Context, err error) error <span class="cov0" title="0">{
+        statusCode := http.StatusInternalServerError
+
+        if errMsg := err.Error(); strings.Contains(errMsg, "validation") </span><span class="cov0" title="0">{
+                statusCode = http.StatusBadRequest
+        }</span>
+
+        <span class="cov0" title="0">return c.JSON(statusCode, ResponseWrapper{
+                Meta: Meta{
+                        Status: false,
+                        Code:   statusCode,
+                        Error:  err.Error(),
+                },
+        })</span>
+}
+</pre>
+		
+		<pre class="file" id="file11" style="display: none">package request
+
+import "go-carbon-tracker/entities"
+
+type TripRequest struct {
+        ID            string
+        StartLocation string `json:"start_location" validate:"required"`
+        EndLocation   string `json:"end_location" validate:"required"`
+        VehicleID     string `json:"vehicle_id" validate:"required"`
+}
+
+func (vehicleRequest TripRequest) ToEntity() entities.Trip <span class="cov0" title="0">{
+        return entities.Trip{
+                Base: entities.Base{ID: vehicleRequest.ID},
+                StartLocation: entities.Location{
+                        Address: vehicleRequest.StartLocation,
+                },
+                EndLocation: entities.Location{
+                        Address: vehicleRequest.EndLocation,
+                },
+                VehicleID: vehicleRequest.VehicleID,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file12" style="display: none">package response
+
+import (
+        "go-carbon-tracker/constants/enums"
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/handlers/base"
+)
+
+type location struct {
+        Address   string  `json:"address"`
+        Latitude  float64 `json:"latitude"`
+        Longitude float64 `json:"longitude"`
+}
+
+type vehicle struct {
+        base.Base
+        Name           string            `json:"name"`
+        VehicleType    enums.VehicleType `json:"vehicle_type"`
+        FuelType       enums.FuelType    `json:"fuel_type"`
+        EmissionFactor float32           `json:"emission_factor"`
+}
+
+type user struct {
+        base.Base
+        Name  string `json:"name"`
+        Email string `json:"email"`
+}
+
+type TripResponsePopulate struct {
+        base.Base
+        DistanceKM     int      `json:"distance_km"`
+        CarbonEmission float32  `json:"carbon_emission"`
+        User           user     `json:"user"`
+        Vehicle        vehicle  `json:"vehicle"`
+        StartLocation  location `json:"start_location"`
+        EndLocation    location `json:"end_location"`
+        Tips           string   `json:"tips"`
+}
+
+type TripResponse struct {
+        base.Base
+        DistanceKM     int     `json:"distance_km"`
+        CarbonEmission float32 `json:"carbon_emission"`
+        UserID         string  `json:"user_id"`
+        VehicleID      string  `json:"vehicle_id"`
+        Tips           string  `json:"tips"`
+}
+
+type ListTripResponse []TripResponse
+
+func (tripResponse TripResponsePopulate) FromEntity(tripEntity entities.Trip) TripResponsePopulate <span class="cov0" title="0">{
+        return TripResponsePopulate{
+                Base:           tripResponse.Base.FromEntity(tripEntity.Base),
+                DistanceKM:     tripEntity.DistanceKM,
+                CarbonEmission: tripEntity.CarbonEmission,
+                User: user{
+                        Base:  tripResponse.User.Base.FromEntity(tripEntity.User.Base),
+                        Name:  tripEntity.User.Name,
+                        Email: tripEntity.User.Email,
+                },
+                Vehicle: vehicle{
+                        Base:           tripResponse.Vehicle.Base.FromEntity(tripEntity.Vehicle.Base),
+                        Name:           tripEntity.Vehicle.Name,
+                        VehicleType:    tripEntity.Vehicle.VehicleType,
+                        FuelType:       tripEntity.Vehicle.FuelType,
+                        EmissionFactor: tripEntity.Vehicle.EmissionFactor,
+                },
+                StartLocation: location{
+                        Address:   tripEntity.StartLocation.Address,
+                        Latitude:  tripEntity.StartLocation.Latitude,
+                        Longitude: tripEntity.StartLocation.Longitude,
+                },
+                EndLocation: location{
+                        Address:   tripEntity.EndLocation.Address,
+                        Latitude:  tripEntity.EndLocation.Latitude,
+                        Longitude: tripEntity.EndLocation.Longitude,
+                },
+                Tips: tripEntity.Tips,
+        }
+}</span>
+
+func (ListTripResponse) FromListEntity(tripEntity []entities.Trip) ListTripResponse <span class="cov0" title="0">{
+        listTrip := ListTripResponse{}
+
+        trip := TripResponse{}
+
+        for _, v := range tripEntity </span><span class="cov0" title="0">{
+                trip.Base = trip.Base.FromEntity(v.Base)
+                trip.DistanceKM = v.DistanceKM
+                trip.CarbonEmission = v.CarbonEmission
+                trip.UserID = v.UserID
+                trip.VehicleID = v.VehicleID
+                trip.Tips = v.Tips
+
+                listTrip = append(listTrip, trip)
+        }</span>
+
+        <span class="cov0" title="0">return listTrip</span>
+}
+</pre>
+		
+		<pre class="file" id="file13" style="display: none">package trip
+
+import (
+        "go-carbon-tracker/constants"
+        "go-carbon-tracker/handlers/base"
+        "go-carbon-tracker/handlers/trip/request"
+        "go-carbon-tracker/handlers/trip/response"
+        "go-carbon-tracker/middlewares"
+        "go-carbon-tracker/usecases/trip"
+        "go-carbon-tracker/utils"
+
+        "github.com/labstack/echo/v4"
+)
+
+type tripHandler struct {
+        usecase trip.TripUsecase
+}
+
+func NewTripHandler(u trip.TripUsecase) *tripHandler <span class="cov0" title="0">{
+        return &amp;tripHandler{
+                usecase: u,
+        }
+}</span>
+
+func (handler tripHandler) GetAll(c echo.Context) error <span class="cov0" title="0">{
+        filter, err := utils.GetFilter(c)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">claims, err := middlewares.GetUser(c)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">filter.UserID = claims.UserID
+
+        result, pagination, err := handler.usecase.GetAll(filter)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponsePagination(c, constants.GET_ALL_TRIPS_SUCCESS, pagination, response.ListTripResponse{}.FromListEntity(result))</span>
+}
+
+func (handler tripHandler) GetByID(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("id")
+
+        result, err := handler.usecase.GetByID(id)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.GET_TRIP_SUCCESS, response.TripResponsePopulate{}.FromEntity(result))</span>
+}
+
+func (handler tripHandler) Create(c echo.Context) error <span class="cov0" title="0">{
+        req := request.TripRequest{}
+
+        if err := c.Bind(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">if err := c.Validate(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">tripReq := req.ToEntity()
+
+        claims, err := middlewares.GetUser(c)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">tripReq.UserID = claims.UserID
+
+        result, err := handler.usecase.Create(tripReq)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.CREATE_TRIP_SUCCESS, response.TripResponsePopulate{}.FromEntity(result))</span>
+}
+
+func (handler tripHandler) Update(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("id")
+
+        req := request.TripRequest{ID: id}
+
+        if err := c.Bind(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">if err := c.Validate(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">tripReq := req.ToEntity()
+
+        claims, err := middlewares.GetUser(c)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">tripReq.UserID = claims.UserID
+
+        result, err := handler.usecase.Update(tripReq)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.UPDATE_TRIP_SUCCESS, response.TripResponsePopulate{}.FromEntity(result))</span>
+}
+
+func (handler tripHandler) Delete(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("id")
+
+        if err := handler.usecase.Delete(id); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.DELETE_TRIP_SUCCESS, nil)</span>
+}
+</pre>
+		
+		<pre class="file" id="file14" style="display: none">package request
+
+import (
+        "go-carbon-tracker/constants/enums"
+        "go-carbon-tracker/entities"
+)
+
+type VehicleRequest struct {
+        ID          string
+        Name        string            `json:"name" validate:"required"`
+        VehicleType enums.VehicleType `json:"vehicle_type" validate:"required,oneof=MOBIL MOTOR TRUK BUS"`
+        FuelType    enums.FuelType    `json:"fuel_type" validate:"required,oneof=PREMIUM SOLAR"`
+}
+
+func (vehicleRequest VehicleRequest) ToEntity() entities.Vehicle <span class="cov0" title="0">{
+        return entities.Vehicle{
+                Base:        entities.Base{ID: vehicleRequest.ID},
+                Name:        vehicleRequest.Name,
+                VehicleType: vehicleRequest.VehicleType,
+                FuelType:    vehicleRequest.FuelType,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file15" style="display: none">package response
+
+import (
+        "go-carbon-tracker/constants/enums"
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/handlers/base"
+)
+
+type VehicleResponse struct {
+        base.Base
+        Name           string            `json:"name"`
+        VehicleType    enums.VehicleType `json:"vehicle_type"`
+        FuelType       enums.FuelType    `json:"fuel_type"`
+        EmissionFactor float32           `json:"emission_factor"`
+        UserID         string            `json:"user_id"`
+}
+
+type ListVehicleResponse []VehicleResponse
+
+func (vehicleResponse VehicleResponse) FromEntity(vehicleEntity entities.Vehicle) VehicleResponse <span class="cov0" title="0">{
+        return VehicleResponse{
+                Base:           vehicleResponse.Base.FromEntity(vehicleEntity.Base),
+                Name:           vehicleEntity.Name,
+                VehicleType:    vehicleEntity.VehicleType,
+                FuelType:       vehicleEntity.FuelType,
+                EmissionFactor: vehicleEntity.EmissionFactor,
+                UserID:         vehicleEntity.UserID,
+        }
+}</span>
+
+func (ListVehicleResponse) FromListEntity(vehicleEntity []entities.Vehicle) ListVehicleResponse <span class="cov0" title="0">{
+        listVehicle := ListVehicleResponse{}
+
+        vehicle := VehicleResponse{}
+
+        for _, v := range vehicleEntity </span><span class="cov0" title="0">{
+                listVehicle = append(listVehicle, vehicle.FromEntity(v))
+        }</span>
+
+        <span class="cov0" title="0">return listVehicle</span>
+}
+</pre>
+		
+		<pre class="file" id="file16" style="display: none">package vehicle
+
+import (
+        "go-carbon-tracker/constants"
+        "go-carbon-tracker/handlers/base"
+        "go-carbon-tracker/handlers/vehicle/request"
+        "go-carbon-tracker/handlers/vehicle/response"
+        "go-carbon-tracker/middlewares"
+        "go-carbon-tracker/usecases/vehicle"
+        "go-carbon-tracker/utils"
+
+        "github.com/labstack/echo/v4"
+)
+
+type vehicleHandler struct {
+        usecase vehicle.VehicleUsecase
+}
+
+func NewVehicleHandler(u vehicle.VehicleUsecase) *vehicleHandler <span class="cov0" title="0">{
+        return &amp;vehicleHandler{
+                usecase: u,
+        }
+}</span>
+
+func (handler vehicleHandler) GetAll(c echo.Context) error <span class="cov0" title="0">{
+        filter, err := utils.GetFilter(c)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">claims, err := middlewares.GetUser(c)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">filter.UserID = claims.UserID
+
+        result, pagination, err := handler.usecase.GetAll(filter)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponsePagination(c, constants.GET_ALL_VEHICLES_SUCCESS, pagination, response.ListVehicleResponse{}.FromListEntity(result))</span>
+}
+
+func (handler vehicleHandler) GetByID(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("id")
+
+        result, err := handler.usecase.GetByID(id)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.GET_VEHICLE_SUCCESS, response.VehicleResponse{}.FromEntity(result))</span>
+}
+
+func (handler vehicleHandler) Create(c echo.Context) error <span class="cov0" title="0">{
+        req := request.VehicleRequest{}
+
+        if err := c.Bind(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">if err := c.Validate(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">vehicleReq := req.ToEntity()
+
+        claims, err := middlewares.GetUser(c)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">vehicleReq.UserID = claims.UserID
+
+        result, err := handler.usecase.Create(vehicleReq)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.CREATE_VEHICLE_SUCCESS, response.VehicleResponse{}.FromEntity(result))</span>
+}
+
+func (handler vehicleHandler) Update(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("id")
+
+        req := request.VehicleRequest{ID: id}
+
+        if err := c.Bind(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">if err := c.Validate(&amp;req); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">vehicleReq := req.ToEntity()
+
+        claims, err := middlewares.GetUser(c)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">vehicleReq.UserID = claims.UserID
+
+        result, err := handler.usecase.Update(vehicleReq)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.UPDATE_VEHICLE_SUCCESS, response.VehicleResponse{}.FromEntity(result))</span>
+}
+
+func (handler vehicleHandler) Delete(c echo.Context) error <span class="cov0" title="0">{
+        id := c.Param("id")
+
+        if err := handler.usecase.Delete(id); err != nil </span><span class="cov0" title="0">{
+                return base.ErrorResponse(c, err)
+        }</span>
+
+        <span class="cov0" title="0">return base.SuccesResponse(c, constants.DELETE_VEHICLE_SUCCESS, nil)</span>
+}
+</pre>
+		
+		<pre class="file" id="file17" style="display: none">package main
+
+import (
+        "go-carbon-tracker/database"
+        "go-carbon-tracker/routes"
+        "log"
+
+        "github.com/joho/godotenv"
+        "github.com/labstack/echo/v4"
+)
+
+func main() <span class="cov0" title="0">{
+        loadEnv()
+
+        db, _ := database.InitDB()
+
+        database.MigrateDB(db)
+
+        e := echo.New()
+
+        routes.InitRoutes(e, db)
+
+        e.Logger.Fatal(e.Start(":1323"))
+}</span>
+
+func loadEnv() <span class="cov0" title="0">{
+        err := godotenv.Load()
+        if err != nil </span><span class="cov0" title="0">{
+                log.Fatal("Error loading .env file")
+                panic("failed to load env")</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file18" style="display: none">package middlewares
+
+import (
+        "go-carbon-tracker/constants"
+        "go-carbon-tracker/handlers/base"
+        "time"
+
+        "github.com/golang-jwt/jwt/v5"
+        echojwt "github.com/labstack/echo-jwt/v4"
+        "github.com/labstack/echo/v4"
+)
+
+type JWTCustomClaims struct {
+        UserID string `json:"user_id"`
+        jwt.RegisteredClaims
+}
+
+type JWTConfig struct {
+        SecretKey       string
+        ExpiresDuration int
+}
+
+func (jwtConfig *JWTConfig) Init() echojwt.Config <span class="cov0" title="0">{
+        return echojwt.Config{
+                NewClaimsFunc: func(c echo.Context) jwt.Claims </span><span class="cov0" title="0">{
+                        return new(JWTCustomClaims)
+                }</span>,
+                SigningKey: []byte(jwtConfig.SecretKey),
+                ErrorHandler: func(c echo.Context, err error) error <span class="cov0" title="0">{
+                        if err != nil </span><span class="cov0" title="0">{
+                                return base.ErrorResponse(c, err)
+                        }</span>
+
+                        <span class="cov0" title="0">return nil</span>
+                },
+        }
+}
+
+func (jwtConfig *JWTConfig) GenerateToken(userID string) (string, error) <span class="cov8" title="1">{
+        expire := jwt.NewNumericDate(time.Now().Local().Add(time.Hour * time.Duration(int64(jwtConfig.ExpiresDuration))))
+
+        claims := &amp;JWTCustomClaims{
+                userID,
+                jwt.RegisteredClaims{
+                        ExpiresAt: expire,
+                },
+        }
+
+        rawToken := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+
+        token, err := rawToken.SignedString([]byte(jwtConfig.SecretKey))
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">return token, nil</span>
+}
+
+func GetUser(c echo.Context) (*JWTCustomClaims, error) <span class="cov0" title="0">{
+        user := c.Get("user").(*jwt.Token)
+
+        if user == nil </span><span class="cov0" title="0">{
+                return nil, constants.Err_INVALID_TOKEN
+        }</span>
+
+        <span class="cov0" title="0">claims := user.Claims.(*JWTCustomClaims)
+
+        return claims, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file19" style="display: none">package middlewares
+
+import (
+        "time"
+
+        "github.com/labstack/echo/v4"
+        "github.com/labstack/echo/v4/middleware"
+        "golang.org/x/time/rate"
+)
+
+type RateLimiterConfig struct {
+        Rate      rate.Limit
+        Burst     int
+        ExpiresIn time.Duration
+}
+
+func (rateLimiterConfig *RateLimiterConfig) Init() echo.MiddlewareFunc <span class="cov0" title="0">{
+        config := middleware.RateLimiterMemoryStoreConfig{
+                Rate:      rateLimiterConfig.Rate,
+                Burst:     rateLimiterConfig.Burst,
+                ExpiresIn: rateLimiterConfig.ExpiresIn,
+        }
+
+        memoryStore := middleware.NewRateLimiterMemoryStoreWithConfig(config)
+
+        return middleware.RateLimiter(memoryStore)
+}</span>
+</pre>
+		
+		<pre class="file" id="file20" style="display: none">package middlewares
+
+import (
+        "github.com/labstack/echo/v4"
+        "github.com/labstack/echo/v4/middleware"
+)
+
+type LoggerConfig struct {
+        Format string
+}
+
+func (loggerConfig *LoggerConfig) Init() echo.MiddlewareFunc <span class="cov0" title="0">{
+        return middleware.LoggerWithConfig(middleware.LoggerConfig{
+                Format: loggerConfig.Format,
+        })
+}</span>
+</pre>
+		
+		<pre class="file" id="file21" style="display: none">package middlewares
+
+import "github.com/go-playground/validator/v10"
+
+type CustomValidator struct {
+        validator *validator.Validate
+}
+
+func InitValidator() *CustomValidator <span class="cov0" title="0">{
+        return &amp;CustomValidator{
+                validator: validator.New(),
+        }
+}</span>
+
+func (cv *CustomValidator) Validate(i interface{}) error <span class="cov0" title="0">{
+        return cv.validator.Struct(i)
+}</span>
+</pre>
+		
+		<pre class="file" id="file22" style="display: none">// Code generated by mockery v2.46.3. DO NOT EDIT.
+
+package mocks
+
+import (
+        entities "go-carbon-tracker/entities"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// AuthRepository is an autogenerated mock type for the AuthRepository type
+type AuthRepository struct {
+        mock.Mock
+}
+
+// Login provides a mock function with given fields: user
+func (_m *AuthRepository) Login(user entities.User) (entities.User, error) <span class="cov8" title="1">{
+        ret := _m.Called(user)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Login")</span>
+        }
+
+        <span class="cov8" title="1">var r0 entities.User
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.User) (entities.User, error)); ok </span><span class="cov0" title="0">{
+                return rf(user)
+        }</span>
+        <span class="cov8" title="1">if rf, ok := ret.Get(0).(func(entities.User) entities.User); ok </span><span class="cov0" title="0">{
+                r0 = rf(user)
+        }</span> else<span class="cov8" title="1"> {
+                r0 = ret.Get(0).(entities.User)
+        }</span>
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(1).(func(entities.User) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(user)
+        }</span> else<span class="cov8" title="1"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov8" title="1">return r0, r1</span>
+}
+
+// Register provides a mock function with given fields: user
+func (_m *AuthRepository) Register(user entities.User) (entities.User, error) <span class="cov8" title="1">{
+        ret := _m.Called(user)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Register")</span>
+        }
+
+        <span class="cov8" title="1">var r0 entities.User
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.User) (entities.User, error)); ok </span><span class="cov0" title="0">{
+                return rf(user)
+        }</span>
+        <span class="cov8" title="1">if rf, ok := ret.Get(0).(func(entities.User) entities.User); ok </span><span class="cov0" title="0">{
+                r0 = rf(user)
+        }</span> else<span class="cov8" title="1"> {
+                r0 = ret.Get(0).(entities.User)
+        }</span>
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(1).(func(entities.User) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(user)
+        }</span> else<span class="cov8" title="1"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov8" title="1">return r0, r1</span>
+}
+
+// NewAuthRepository creates a new instance of AuthRepository. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+// The first argument is typically a *testing.T value.
+func NewAuthRepository(t interface {
+        mock.TestingT
+        Cleanup(func())
+}) *AuthRepository <span class="cov0" title="0">{
+        mock := &amp;AuthRepository{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file23" style="display: none">// Code generated by mockery v2.46.3. DO NOT EDIT.
+
+package mocks
+
+import (
+        entities "go-carbon-tracker/entities"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// TripRepository is an autogenerated mock type for the TripRepository type
+type TripRepository struct {
+        mock.Mock
+}
+
+// Create provides a mock function with given fields: _a0
+func (_m *TripRepository) Create(_a0 entities.Trip) (entities.Trip, error) <span class="cov0" title="0">{
+        ret := _m.Called(_a0)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Create")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.Trip
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.Trip) (entities.Trip, error)); ok </span><span class="cov0" title="0">{
+                return rf(_a0)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.Trip) entities.Trip); ok </span><span class="cov0" title="0">{
+                r0 = rf(_a0)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.Trip)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.Trip) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(_a0)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Delete provides a mock function with given fields: id
+func (_m *TripRepository) Delete(id string) error <span class="cov8" title="1">{
+        ret := _m.Called(id)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Delete")</span>
+        }
+
+        <span class="cov8" title="1">var r0 error
+        if rf, ok := ret.Get(0).(func(string) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(id)
+        }</span> else<span class="cov8" title="1"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov8" title="1">return r0</span>
+}
+
+// GetAll provides a mock function with given fields: filter
+func (_m *TripRepository) GetAll(filter entities.Filter) ([]entities.Trip, entities.Pagination, error) <span class="cov8" title="1">{
+        ret := _m.Called(filter)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for GetAll")</span>
+        }
+
+        <span class="cov8" title="1">var r0 []entities.Trip
+        var r1 entities.Pagination
+        var r2 error
+        if rf, ok := ret.Get(0).(func(entities.Filter) ([]entities.Trip, entities.Pagination, error)); ok </span><span class="cov0" title="0">{
+                return rf(filter)
+        }</span>
+        <span class="cov8" title="1">if rf, ok := ret.Get(0).(func(entities.Filter) []entities.Trip); ok </span><span class="cov0" title="0">{
+                r0 = rf(filter)
+        }</span> else<span class="cov8" title="1"> {
+                if ret.Get(0) != nil </span><span class="cov8" title="1">{
+                        r0 = ret.Get(0).([]entities.Trip)
+                }</span>
+        }
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(1).(func(entities.Filter) entities.Pagination); ok </span><span class="cov0" title="0">{
+                r1 = rf(filter)
+        }</span> else<span class="cov8" title="1"> {
+                r1 = ret.Get(1).(entities.Pagination)
+        }</span>
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(2).(func(entities.Filter) error); ok </span><span class="cov0" title="0">{
+                r2 = rf(filter)
+        }</span> else<span class="cov8" title="1"> {
+                r2 = ret.Error(2)
+        }</span>
+
+        <span class="cov8" title="1">return r0, r1, r2</span>
+}
+
+// GetByID provides a mock function with given fields: id
+func (_m *TripRepository) GetByID(id string) (entities.Trip, error) <span class="cov8" title="1">{
+        ret := _m.Called(id)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for GetByID")</span>
+        }
+
+        <span class="cov8" title="1">var r0 entities.Trip
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string) (entities.Trip, error)); ok </span><span class="cov0" title="0">{
+                return rf(id)
+        }</span>
+        <span class="cov8" title="1">if rf, ok := ret.Get(0).(func(string) entities.Trip); ok </span><span class="cov0" title="0">{
+                r0 = rf(id)
+        }</span> else<span class="cov8" title="1"> {
+                r0 = ret.Get(0).(entities.Trip)
+        }</span>
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(1).(func(string) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(id)
+        }</span> else<span class="cov8" title="1"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov8" title="1">return r0, r1</span>
+}
+
+// Update provides a mock function with given fields: _a0
+func (_m *TripRepository) Update(_a0 entities.Trip) (entities.Trip, error) <span class="cov0" title="0">{
+        ret := _m.Called(_a0)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Update")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.Trip
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.Trip) (entities.Trip, error)); ok </span><span class="cov0" title="0">{
+                return rf(_a0)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.Trip) entities.Trip); ok </span><span class="cov0" title="0">{
+                r0 = rf(_a0)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.Trip)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.Trip) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(_a0)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// NewTripRepository creates a new instance of TripRepository. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+// The first argument is typically a *testing.T value.
+func NewTripRepository(t interface {
+        mock.TestingT
+        Cleanup(func())
+}) *TripRepository <span class="cov0" title="0">{
+        mock := &amp;TripRepository{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file24" style="display: none">// Code generated by mockery v2.46.3. DO NOT EDIT.
+
+package mocks
+
+import (
+        entities "go-carbon-tracker/entities"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// VehicleRepository is an autogenerated mock type for the VehicleRepository type
+type VehicleRepository struct {
+        mock.Mock
+}
+
+// Create provides a mock function with given fields: _a0
+func (_m *VehicleRepository) Create(_a0 entities.Vehicle) (entities.Vehicle, error) <span class="cov8" title="1">{
+        ret := _m.Called(_a0)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Create")</span>
+        }
+
+        <span class="cov8" title="1">var r0 entities.Vehicle
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.Vehicle) (entities.Vehicle, error)); ok </span><span class="cov0" title="0">{
+                return rf(_a0)
+        }</span>
+        <span class="cov8" title="1">if rf, ok := ret.Get(0).(func(entities.Vehicle) entities.Vehicle); ok </span><span class="cov0" title="0">{
+                r0 = rf(_a0)
+        }</span> else<span class="cov8" title="1"> {
+                r0 = ret.Get(0).(entities.Vehicle)
+        }</span>
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(1).(func(entities.Vehicle) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(_a0)
+        }</span> else<span class="cov8" title="1"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov8" title="1">return r0, r1</span>
+}
+
+// Delete provides a mock function with given fields: id
+func (_m *VehicleRepository) Delete(id string) error <span class="cov8" title="1">{
+        ret := _m.Called(id)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Delete")</span>
+        }
+
+        <span class="cov8" title="1">var r0 error
+        if rf, ok := ret.Get(0).(func(string) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(id)
+        }</span> else<span class="cov8" title="1"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov8" title="1">return r0</span>
+}
+
+// GetAll provides a mock function with given fields: filter
+func (_m *VehicleRepository) GetAll(filter entities.Filter) ([]entities.Vehicle, entities.Pagination, error) <span class="cov8" title="1">{
+        ret := _m.Called(filter)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for GetAll")</span>
+        }
+
+        <span class="cov8" title="1">var r0 []entities.Vehicle
+        var r1 entities.Pagination
+        var r2 error
+        if rf, ok := ret.Get(0).(func(entities.Filter) ([]entities.Vehicle, entities.Pagination, error)); ok </span><span class="cov0" title="0">{
+                return rf(filter)
+        }</span>
+        <span class="cov8" title="1">if rf, ok := ret.Get(0).(func(entities.Filter) []entities.Vehicle); ok </span><span class="cov0" title="0">{
+                r0 = rf(filter)
+        }</span> else<span class="cov8" title="1"> {
+                if ret.Get(0) != nil </span><span class="cov8" title="1">{
+                        r0 = ret.Get(0).([]entities.Vehicle)
+                }</span>
+        }
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(1).(func(entities.Filter) entities.Pagination); ok </span><span class="cov0" title="0">{
+                r1 = rf(filter)
+        }</span> else<span class="cov8" title="1"> {
+                r1 = ret.Get(1).(entities.Pagination)
+        }</span>
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(2).(func(entities.Filter) error); ok </span><span class="cov0" title="0">{
+                r2 = rf(filter)
+        }</span> else<span class="cov8" title="1"> {
+                r2 = ret.Error(2)
+        }</span>
+
+        <span class="cov8" title="1">return r0, r1, r2</span>
+}
+
+// GetByID provides a mock function with given fields: id
+func (_m *VehicleRepository) GetByID(id string) (entities.Vehicle, error) <span class="cov8" title="1">{
+        ret := _m.Called(id)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for GetByID")</span>
+        }
+
+        <span class="cov8" title="1">var r0 entities.Vehicle
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string) (entities.Vehicle, error)); ok </span><span class="cov0" title="0">{
+                return rf(id)
+        }</span>
+        <span class="cov8" title="1">if rf, ok := ret.Get(0).(func(string) entities.Vehicle); ok </span><span class="cov0" title="0">{
+                r0 = rf(id)
+        }</span> else<span class="cov8" title="1"> {
+                r0 = ret.Get(0).(entities.Vehicle)
+        }</span>
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(1).(func(string) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(id)
+        }</span> else<span class="cov8" title="1"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov8" title="1">return r0, r1</span>
+}
+
+// Update provides a mock function with given fields: _a0
+func (_m *VehicleRepository) Update(_a0 entities.Vehicle) (entities.Vehicle, error) <span class="cov8" title="1">{
+        ret := _m.Called(_a0)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Update")</span>
+        }
+
+        <span class="cov8" title="1">var r0 entities.Vehicle
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.Vehicle) (entities.Vehicle, error)); ok </span><span class="cov0" title="0">{
+                return rf(_a0)
+        }</span>
+        <span class="cov8" title="1">if rf, ok := ret.Get(0).(func(entities.Vehicle) entities.Vehicle); ok </span><span class="cov0" title="0">{
+                r0 = rf(_a0)
+        }</span> else<span class="cov8" title="1"> {
+                r0 = ret.Get(0).(entities.Vehicle)
+        }</span>
+
+        <span class="cov8" title="1">if rf, ok := ret.Get(1).(func(entities.Vehicle) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(_a0)
+        }</span> else<span class="cov8" title="1"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov8" title="1">return r0, r1</span>
+}
+
+// NewVehicleRepository creates a new instance of VehicleRepository. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+// The first argument is typically a *testing.T value.
+func NewVehicleRepository(t interface {
+        mock.TestingT
+        Cleanup(func())
+}) *VehicleRepository <span class="cov0" title="0">{
+        mock := &amp;VehicleRepository{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file25" style="display: none">// Code generated by mockery v2.46.3. DO NOT EDIT.
+
+package mocks
+
+import (
+        entities "go-carbon-tracker/entities"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// AuthUsecase is an autogenerated mock type for the AuthUsecase type
+type AuthUsecase struct {
+        mock.Mock
+}
+
+// Login provides a mock function with given fields: user
+func (_m *AuthUsecase) Login(user entities.User) (entities.User, error) <span class="cov0" title="0">{
+        ret := _m.Called(user)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Login")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.User
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.User) (entities.User, error)); ok </span><span class="cov0" title="0">{
+                return rf(user)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.User) entities.User); ok </span><span class="cov0" title="0">{
+                r0 = rf(user)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.User)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.User) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(user)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Register provides a mock function with given fields: user
+func (_m *AuthUsecase) Register(user entities.User) (entities.User, error) <span class="cov0" title="0">{
+        ret := _m.Called(user)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Register")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.User
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.User) (entities.User, error)); ok </span><span class="cov0" title="0">{
+                return rf(user)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.User) entities.User); ok </span><span class="cov0" title="0">{
+                r0 = rf(user)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.User)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.User) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(user)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// NewAuthUsecase creates a new instance of AuthUsecase. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+// The first argument is typically a *testing.T value.
+func NewAuthUsecase(t interface {
+        mock.TestingT
+        Cleanup(func())
+}) *AuthUsecase <span class="cov0" title="0">{
+        mock := &amp;AuthUsecase{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file26" style="display: none">// Code generated by mockery v2.46.3. DO NOT EDIT.
+
+package mocks
+
+import (
+        entities "go-carbon-tracker/entities"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// TripUsecase is an autogenerated mock type for the TripUsecase type
+type TripUsecase struct {
+        mock.Mock
+}
+
+// Create provides a mock function with given fields: vehicle
+func (_m *TripUsecase) Create(vehicle entities.Trip) (entities.Trip, error) <span class="cov0" title="0">{
+        ret := _m.Called(vehicle)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Create")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.Trip
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.Trip) (entities.Trip, error)); ok </span><span class="cov0" title="0">{
+                return rf(vehicle)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.Trip) entities.Trip); ok </span><span class="cov0" title="0">{
+                r0 = rf(vehicle)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.Trip)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.Trip) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(vehicle)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Delete provides a mock function with given fields: id
+func (_m *TripUsecase) Delete(id string) error <span class="cov0" title="0">{
+        ret := _m.Called(id)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Delete")</span>
+        }
+
+        <span class="cov0" title="0">var r0 error
+        if rf, ok := ret.Get(0).(func(string) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(id)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov0" title="0">return r0</span>
+}
+
+// GetAll provides a mock function with given fields: filter
+func (_m *TripUsecase) GetAll(filter entities.Filter) ([]entities.Trip, entities.Pagination, error) <span class="cov0" title="0">{
+        ret := _m.Called(filter)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for GetAll")</span>
+        }
+
+        <span class="cov0" title="0">var r0 []entities.Trip
+        var r1 entities.Pagination
+        var r2 error
+        if rf, ok := ret.Get(0).(func(entities.Filter) ([]entities.Trip, entities.Pagination, error)); ok </span><span class="cov0" title="0">{
+                return rf(filter)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.Filter) []entities.Trip); ok </span><span class="cov0" title="0">{
+                r0 = rf(filter)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).([]entities.Trip)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.Filter) entities.Pagination); ok </span><span class="cov0" title="0">{
+                r1 = rf(filter)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Get(1).(entities.Pagination)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(2).(func(entities.Filter) error); ok </span><span class="cov0" title="0">{
+                r2 = rf(filter)
+        }</span> else<span class="cov0" title="0"> {
+                r2 = ret.Error(2)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1, r2</span>
+}
+
+// GetByID provides a mock function with given fields: id
+func (_m *TripUsecase) GetByID(id string) (entities.Trip, error) <span class="cov0" title="0">{
+        ret := _m.Called(id)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for GetByID")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.Trip
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string) (entities.Trip, error)); ok </span><span class="cov0" title="0">{
+                return rf(id)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string) entities.Trip); ok </span><span class="cov0" title="0">{
+                r0 = rf(id)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.Trip)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(id)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Update provides a mock function with given fields: vehicle
+func (_m *TripUsecase) Update(vehicle entities.Trip) (entities.Trip, error) <span class="cov0" title="0">{
+        ret := _m.Called(vehicle)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Update")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.Trip
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.Trip) (entities.Trip, error)); ok </span><span class="cov0" title="0">{
+                return rf(vehicle)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.Trip) entities.Trip); ok </span><span class="cov0" title="0">{
+                r0 = rf(vehicle)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.Trip)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.Trip) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(vehicle)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// NewTripUsecase creates a new instance of TripUsecase. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+// The first argument is typically a *testing.T value.
+func NewTripUsecase(t interface {
+        mock.TestingT
+        Cleanup(func())
+}) *TripUsecase <span class="cov0" title="0">{
+        mock := &amp;TripUsecase{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file27" style="display: none">// Code generated by mockery v2.46.3. DO NOT EDIT.
+
+package mocks
+
+import (
+        entities "go-carbon-tracker/entities"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// VehicleUsecase is an autogenerated mock type for the VehicleUsecase type
+type VehicleUsecase struct {
+        mock.Mock
+}
+
+// Create provides a mock function with given fields: _a0
+func (_m *VehicleUsecase) Create(_a0 entities.Vehicle) (entities.Vehicle, error) <span class="cov0" title="0">{
+        ret := _m.Called(_a0)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Create")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.Vehicle
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.Vehicle) (entities.Vehicle, error)); ok </span><span class="cov0" title="0">{
+                return rf(_a0)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.Vehicle) entities.Vehicle); ok </span><span class="cov0" title="0">{
+                r0 = rf(_a0)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.Vehicle)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.Vehicle) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(_a0)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Delete provides a mock function with given fields: id
+func (_m *VehicleUsecase) Delete(id string) error <span class="cov0" title="0">{
+        ret := _m.Called(id)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Delete")</span>
+        }
+
+        <span class="cov0" title="0">var r0 error
+        if rf, ok := ret.Get(0).(func(string) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(id)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov0" title="0">return r0</span>
+}
+
+// GetAll provides a mock function with given fields: filter
+func (_m *VehicleUsecase) GetAll(filter entities.Filter) ([]entities.Vehicle, entities.Pagination, error) <span class="cov0" title="0">{
+        ret := _m.Called(filter)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for GetAll")</span>
+        }
+
+        <span class="cov0" title="0">var r0 []entities.Vehicle
+        var r1 entities.Pagination
+        var r2 error
+        if rf, ok := ret.Get(0).(func(entities.Filter) ([]entities.Vehicle, entities.Pagination, error)); ok </span><span class="cov0" title="0">{
+                return rf(filter)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.Filter) []entities.Vehicle); ok </span><span class="cov0" title="0">{
+                r0 = rf(filter)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).([]entities.Vehicle)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.Filter) entities.Pagination); ok </span><span class="cov0" title="0">{
+                r1 = rf(filter)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Get(1).(entities.Pagination)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(2).(func(entities.Filter) error); ok </span><span class="cov0" title="0">{
+                r2 = rf(filter)
+        }</span> else<span class="cov0" title="0"> {
+                r2 = ret.Error(2)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1, r2</span>
+}
+
+// GetByID provides a mock function with given fields: id
+func (_m *VehicleUsecase) GetByID(id string) (entities.Vehicle, error) <span class="cov0" title="0">{
+        ret := _m.Called(id)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for GetByID")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.Vehicle
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string) (entities.Vehicle, error)); ok </span><span class="cov0" title="0">{
+                return rf(id)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string) entities.Vehicle); ok </span><span class="cov0" title="0">{
+                r0 = rf(id)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.Vehicle)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(id)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Update provides a mock function with given fields: _a0
+func (_m *VehicleUsecase) Update(_a0 entities.Vehicle) (entities.Vehicle, error) <span class="cov0" title="0">{
+        ret := _m.Called(_a0)
+
+        if len(ret) == 0 </span><span class="cov0" title="0">{
+                panic("no return value specified for Update")</span>
+        }
+
+        <span class="cov0" title="0">var r0 entities.Vehicle
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entities.Vehicle) (entities.Vehicle, error)); ok </span><span class="cov0" title="0">{
+                return rf(_a0)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(entities.Vehicle) entities.Vehicle); ok </span><span class="cov0" title="0">{
+                r0 = rf(_a0)
+        }</span> else<span class="cov0" title="0"> {
+                r0 = ret.Get(0).(entities.Vehicle)
+        }</span>
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(entities.Vehicle) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(_a0)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// NewVehicleUsecase creates a new instance of VehicleUsecase. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+// The first argument is typically a *testing.T value.
+func NewVehicleUsecase(t interface {
+        mock.TestingT
+        Cleanup(func())
+}) *VehicleUsecase <span class="cov0" title="0">{
+        mock := &amp;VehicleUsecase{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file28" style="display: none">package models
+
+import (
+        "go-carbon-tracker/entities"
+)
+
+type User struct {
+        Base
+        Name     string
+        Email    string `gorm:"unique"`
+        Password string
+        Trips    ListTrip
+        Vehicles ListVehicle
+}
+
+func (user User) FromEntity(userEntity entities.User) User <span class="cov0" title="0">{
+        return User{
+                Base:     user.Base.FromEntity(userEntity.Base),
+                Name:     userEntity.Name,
+                Email:    userEntity.Email,
+                Password: userEntity.Password,
+                Trips:    ListTrip{}.FromListEntity(userEntity.Trips),
+                Vehicles: ListVehicle{}.FromListEntity(userEntity.Vehicles),
+        }
+}</span>
+
+func (user User) ToEntity() entities.User <span class="cov0" title="0">{
+        return entities.User{
+                Base:     user.Base.ToEntity(),
+                Name:     user.Name,
+                Email:    user.Email,
+                Password: user.Password,
+                Trips:    user.Trips.ToListEntity(),
+                Vehicles: user.Vehicles.ToListEntity(),
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file29" style="display: none">package models
+
+import (
+        "go-carbon-tracker/entities"
+        "time"
+
+        "github.com/google/uuid"
+        "gorm.io/gorm"
+)
+
+type Base struct {
+        ID        string `gorm:"primaryKey"`
+        CreatedAt time.Time
+        UpdatedAt time.Time
+        DeletedAt gorm.DeletedAt `gorm:"index"`
+}
+
+func (base *Base) BeforeCreate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        base.ID = uuid.New().String()
+        return
+}</span>
+
+func (Base) FromEntity(baseEntity entities.Base) Base <span class="cov0" title="0">{
+        return Base{
+                ID:        baseEntity.ID,
+                CreatedAt: baseEntity.CreatedAt,
+                UpdatedAt: baseEntity.UpdatedAt,
+                DeletedAt: baseEntity.DeletedAt,
+        }
+}</span>
+
+func (base Base) ToEntity() entities.Base <span class="cov0" title="0">{
+        return entities.Base{
+                ID:        base.ID,
+                CreatedAt: base.CreatedAt,
+                UpdatedAt: base.UpdatedAt,
+                DeletedAt: base.DeletedAt,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file30" style="display: none">package models
+
+import (
+        "go-carbon-tracker/entities"
+)
+
+type Trip struct {
+        Base
+        DistanceKM      int
+        CarbonEmission  float32  `gorm:"type:decimal(10,3)"`
+        UserID          string   `gorm:"size:191"`
+        User            User     `gorm:"foreignKey:UserID;references:ID"`
+        VehicleID       string   `gorm:"size:191"`
+        Vehicle         Vehicle  `gorm:"foreignKey:VehicleID;references:ID"`
+        StartLocationID string   `gorm:"size:191"`
+        StartLocation   Location `gorm:"foreignKey:StartLocationID;references:ID"`
+        EndLocationID   string   `gorm:"size:191"`
+        EndLocation     Location `gorm:"foreignKey:EndLocationID;references:ID"`
+        Tips            string
+}
+
+type ListTrip []Trip
+
+func (trip Trip) FromEntity(tripEntity entities.Trip) Trip <span class="cov0" title="0">{
+        return Trip{
+                Base:            trip.Base.FromEntity(tripEntity.Base),
+                DistanceKM:      tripEntity.DistanceKM,
+                CarbonEmission:  tripEntity.CarbonEmission,
+                UserID:          tripEntity.UserID,
+                User:            trip.User.FromEntity(tripEntity.User),
+                VehicleID:       tripEntity.VehicleID,
+                Vehicle:         trip.Vehicle.FromEntity(tripEntity.Vehicle),
+                StartLocationID: tripEntity.StartLocationID,
+                StartLocation: Location{
+                        Base:      trip.Base.FromEntity(tripEntity.StartLocation.Base),
+                        Address:   tripEntity.StartLocation.Address,
+                        Latitude:  tripEntity.StartLocation.Latitude,
+                        Longitude: tripEntity.StartLocation.Longitude,
+                },
+                EndLocationID: tripEntity.EndLocationID,
+                EndLocation: Location{
+                        Base:      trip.Base.FromEntity(tripEntity.EndLocation.Base),
+                        Address:   tripEntity.EndLocation.Address,
+                        Latitude:  tripEntity.EndLocation.Latitude,
+                        Longitude: tripEntity.EndLocation.Longitude,
+                },
+                Tips: tripEntity.Tips,
+        }
+}</span>
+
+func (trip Trip) ToEntity() entities.Trip <span class="cov0" title="0">{
+        return entities.Trip{
+                Base:            trip.Base.ToEntity(),
+                DistanceKM:      trip.DistanceKM,
+                CarbonEmission:  trip.CarbonEmission,
+                UserID:          trip.UserID,
+                User:            trip.User.ToEntity(),
+                VehicleID:       trip.VehicleID,
+                Vehicle:         trip.Vehicle.ToEntity(),
+                StartLocationID: trip.StartLocationID,
+                StartLocation: entities.Location{
+                        Base:      trip.StartLocation.Base.ToEntity(),
+                        Address:   trip.StartLocation.Address,
+                        Latitude:  trip.StartLocation.Latitude,
+                        Longitude: trip.StartLocation.Longitude,
+                },
+                EndLocationID: trip.EndLocationID,
+                EndLocation: entities.Location{
+                        Base:      trip.EndLocation.Base.ToEntity(),
+                        Address:   trip.EndLocation.Address,
+                        Latitude:  trip.EndLocation.Latitude,
+                        Longitude: trip.EndLocation.Longitude,
+                },
+                Tips: trip.Tips,
+        }
+}</span>
+
+func (ListTrip) FromListEntity(tripEntity []entities.Trip) ListTrip <span class="cov0" title="0">{
+        listTrip := ListTrip{}
+
+        for _, v := range tripEntity </span><span class="cov0" title="0">{
+                trip := Trip{}.FromEntity(v)
+
+                listTrip = append(listTrip, trip)
+        }</span>
+
+        <span class="cov0" title="0">return listTrip</span>
+}
+
+func (listTrip ListTrip) ToListEntity() []entities.Trip <span class="cov0" title="0">{
+        tripEntity := []entities.Trip{}
+
+        for _, v := range listTrip </span><span class="cov0" title="0">{
+                tripEntity = append(tripEntity, v.ToEntity())
+        }</span>
+
+        <span class="cov0" title="0">return tripEntity</span>
+}
+</pre>
+		
+		<pre class="file" id="file31" style="display: none">package models
+
+import (
+        "go-carbon-tracker/constants/enums"
+        "go-carbon-tracker/entities"
+)
+
+type Vehicle struct {
+        Base
+        Name           string            `gorm:"size:191"`
+        VehicleType    enums.VehicleType `gorm:"type:enum('MOBIL', 'BUS', 'TRUK', 'MOTOR');column:vehicle_type"`
+        FuelType       enums.FuelType    `gorm:"type:enum('SOLAR', 'PREMIUM');column:fuel_type"`
+        EmissionFactor float32           `gorm:"type:decimal(10,3)"`
+        UserID         string            `gorm:"size:191"`
+        Trips          ListTrip
+}
+
+type ListVehicle []Vehicle
+
+func (vehicle Vehicle) FromEntity(vehicleEntity entities.Vehicle) Vehicle <span class="cov0" title="0">{
+        return Vehicle{
+                Base:           vehicle.Base.FromEntity(vehicleEntity.Base),
+                Name:           vehicleEntity.Name,
+                VehicleType:    vehicleEntity.VehicleType,
+                FuelType:       vehicleEntity.FuelType,
+                EmissionFactor: vehicleEntity.EmissionFactor,
+                Trips:          ListTrip{}.FromListEntity(vehicleEntity.Trips),
+                UserID:         vehicleEntity.UserID,
+        }
+}</span>
+
+func (vehicle Vehicle) ToEntity() entities.Vehicle <span class="cov0" title="0">{
+        return entities.Vehicle{
+                Base:           vehicle.Base.ToEntity(),
+                Name:           vehicle.Name,
+                VehicleType:    vehicle.VehicleType,
+                FuelType:       vehicle.FuelType,
+                EmissionFactor: vehicle.EmissionFactor,
+                Trips:          vehicle.Trips.ToListEntity(),
+                UserID:         vehicle.UserID,
+        }
+}</span>
+
+func (ListVehicle) FromListEntity(vehicleEntity []entities.Vehicle) ListVehicle <span class="cov0" title="0">{
+        listVehicle := ListVehicle{}
+
+        vehicle := Vehicle{}
+
+        for _, v := range vehicleEntity </span><span class="cov0" title="0">{
+                listVehicle = append(listVehicle, vehicle.FromEntity(v))
+        }</span>
+
+        <span class="cov0" title="0">return listVehicle</span>
+}
+
+func (listVehicle ListVehicle) ToListEntity() []entities.Vehicle <span class="cov0" title="0">{
+        vehicleEntity := []entities.Vehicle{}
+
+        for _, v := range listVehicle </span><span class="cov0" title="0">{
+                vehicleEntity = append(vehicleEntity, v.ToEntity())
+        }</span>
+
+        <span class="cov0" title="0">return vehicleEntity</span>
+}
+</pre>
+		
+		<pre class="file" id="file32" style="display: none">package auth
+
+import (
+        "go-carbon-tracker/constants"
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/models"
+
+        "gorm.io/gorm"
+)
+
+type authRepository struct {
+        db *gorm.DB
+}
+
+func NewAuthRepository(db *gorm.DB) *authRepository <span class="cov0" title="0">{
+        return &amp;authRepository{
+                db: db,
+        }
+}</span>
+
+func (repository *authRepository) Login(user entities.User) (entities.User, error) <span class="cov0" title="0">{
+        userModel := models.User{}.FromEntity(user)
+
+        result := repository.db.First(&amp;userModel, "email = ?", userModel.Email)
+
+        if result.Error != nil </span><span class="cov0" title="0">{
+                return entities.User{}, constants.Err_INVALID_EMAIL
+        }</span>
+
+        <span class="cov0" title="0">return userModel.ToEntity(), nil</span>
+}
+
+func (repository authRepository) Register(user entities.User) (entities.User, error) <span class="cov0" title="0">{
+        userModel := models.User{}.FromEntity(user)
+
+        result := repository.db.Create(&amp;userModel)
+
+        if err := result.Error; err != nil </span><span class="cov0" title="0">{
+                return entities.User{}, err
+        }</span>
+
+        <span class="cov0" title="0">return userModel.ToEntity(), nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file33" style="display: none">package trip
+
+import (
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/models"
+
+        "gorm.io/gorm"
+        "gorm.io/gorm/clause"
+)
+
+type tripRepository struct {
+        db *gorm.DB
+}
+
+func NewTripRepository(db *gorm.DB) *tripRepository <span class="cov0" title="0">{
+        return &amp;tripRepository{
+                db: db,
+        }
+}</span>
+
+func (repository tripRepository) GetAll(filter entities.Filter) ([]entities.Trip, entities.Pagination, error) <span class="cov0" title="0">{
+        tripModel := models.ListTrip{}
+
+        query := repository.db.Model(&amp;tripModel)
+
+        if filter.Search != "" </span><span class="cov0" title="0">{
+                query = query.Where("tips LIKE ?", "%"+filter.Search+"%")
+        }</span>
+
+        <span class="cov0" title="0">if !filter.StartDate.IsZero() &amp;&amp; !filter.EndDate.IsZero() </span><span class="cov0" title="0">{
+                query = query.Where("created_at BETWEEN ? AND ?", filter.StartDate, filter.EndDate)
+        }</span>
+
+        <span class="cov0" title="0">query = query.Order(filter.SortBy + " " + filter.Sort)
+
+        query.Where("user_id = ?", filter.UserID)
+
+        var totalItems int64
+
+        if err := query.Count(&amp;totalItems).Error; err != nil </span><span class="cov0" title="0">{
+                return nil, entities.Pagination{}, err
+        }</span>
+
+        <span class="cov0" title="0">offset := (filter.Page - 1) * filter.Limit
+
+        if err := query.Limit(filter.Limit).Offset(offset).Find(&amp;tripModel).Error; err != nil </span><span class="cov0" title="0">{
+                return nil, entities.Pagination{}, err
+        }</span>
+
+        <span class="cov0" title="0">pagination := entities.Pagination{
+                Page:       filter.Page,
+                Limit:      filter.Limit,
+                TotalItems: int(totalItems),
+                TotalPages: int((int(totalItems) + filter.Limit - 1) / filter.Limit),
+        }
+
+        return tripModel.ToListEntity(), pagination, nil</span>
+}
+
+func (repository tripRepository) GetByID(id string) (entities.Trip, error) <span class="cov0" title="0">{
+        tripModel := models.Trip{}
+
+        if err := repository.db.Preload(clause.Associations).First(&amp;tripModel, &amp;id).Error; err != nil </span><span class="cov0" title="0">{
+                return entities.Trip{}, err
+        }</span>
+
+        <span class="cov0" title="0">return tripModel.ToEntity(), nil</span>
+}
+
+func (repository tripRepository) Create(trip entities.Trip) (entities.Trip, error) <span class="cov0" title="0">{
+        tripModel := models.Trip{}.FromEntity(trip)
+
+        if err := repository.db.Omit("Vehicle", "User").Create(&amp;tripModel).Preload(clause.Associations).Find(&amp;tripModel).Error; err != nil </span><span class="cov0" title="0">{
+                return entities.Trip{}, err
+        }</span>
+
+        <span class="cov0" title="0">return tripModel.ToEntity(), nil</span>
+}
+
+func (repository tripRepository) Update(trip entities.Trip) (entities.Trip, error) <span class="cov0" title="0">{
+        tripModel := models.Trip{}.FromEntity(trip)
+
+        err := repository.db.Transaction(func(tx *gorm.DB) error </span><span class="cov0" title="0">{
+                if err := tx.Omit("Vehicle", "User", "StartLocation", "EndLocation").
+                        Updates(&amp;tripModel).Error; err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+
+                <span class="cov0" title="0">if err := tx.Model(&amp;tripModel.StartLocation).Where("id = ?", tripModel.StartLocationID).
+                        Updates(tripModel.StartLocation).Error; err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+
+                <span class="cov0" title="0">if err := tx.Model(&amp;tripModel.EndLocation).Where("id = ?", tripModel.EndLocationID).
+                        Updates(tripModel.EndLocation).Error; err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+
+                <span class="cov0" title="0">if err := tx.Preload(clause.Associations).Find(&amp;tripModel).Error; err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+
+                <span class="cov0" title="0">return nil</span>
+        })
+
+        <span class="cov0" title="0">if err != nil </span><span class="cov0" title="0">{
+                return entities.Trip{}, err
+        }</span>
+
+        <span class="cov0" title="0">return tripModel.ToEntity(), nil</span>
+}
+
+func (repository tripRepository) Delete(id string) error <span class="cov0" title="0">{
+        tripModel := models.Trip{Base: models.Base{ID: id}}
+
+        if err := repository.db.Select("StartLocation", "EndLocation").Delete(&amp;tripModel).Error; err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file34" style="display: none">package vehicle
+
+import (
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/models"
+
+        "gorm.io/gorm"
+)
+
+type vehicleRepository struct {
+        db *gorm.DB
+}
+
+func NewVehicleRepository(db *gorm.DB) *vehicleRepository <span class="cov0" title="0">{
+        return &amp;vehicleRepository{
+                db: db,
+        }
+}</span>
+
+func (repository vehicleRepository) GetAll(filter entities.Filter) ([]entities.Vehicle, entities.Pagination, error) <span class="cov0" title="0">{
+        vehicleModel := models.ListVehicle{}
+
+        query := repository.db.Model(&amp;vehicleModel)
+
+        if filter.Search != "" </span><span class="cov0" title="0">{
+                query = query.Where("name LIKE ?", "%"+filter.Search+"%").Or("vehicle_type LIKE ?", "%"+filter.Search+"%").Or("fuel_type LIKE ?", "%"+filter.Search+"%")
+        }</span>
+
+        <span class="cov0" title="0">if !filter.StartDate.IsZero() &amp;&amp; !filter.EndDate.IsZero() </span><span class="cov0" title="0">{
+                query = query.Where("created_at BETWEEN ? AND ?", filter.StartDate, filter.EndDate)
+        }</span>
+
+        <span class="cov0" title="0">query = query.Order(filter.SortBy + " " + filter.Sort)
+
+        query.Where("user_id = ?", filter.UserID)
+
+        var totalItems int64
+
+        if err := query.Count(&amp;totalItems).Error; err != nil </span><span class="cov0" title="0">{
+                return nil, entities.Pagination{}, err
+        }</span>
+
+        <span class="cov0" title="0">offset := (filter.Page - 1) * filter.Limit
+
+        if err := query.Limit(filter.Limit).Offset(offset).Find(&amp;vehicleModel).Error; err != nil </span><span class="cov0" title="0">{
+                return nil, entities.Pagination{}, err
+        }</span>
+
+        <span class="cov0" title="0">pagination := entities.Pagination{
+                Page:       filter.Page,
+                Limit:      filter.Limit,
+                TotalItems: int(totalItems),
+                TotalPages: int((int(totalItems) + filter.Limit - 1) / filter.Limit),
+        }
+
+        return vehicleModel.ToListEntity(), pagination, nil</span>
+}
+
+func (repository vehicleRepository) GetByID(id string) (entities.Vehicle, error) <span class="cov0" title="0">{
+        vehicleModel := models.Vehicle{}
+
+        if err := repository.db.First(&amp;vehicleModel, &amp;id).Error; err != nil </span><span class="cov0" title="0">{
+                return entities.Vehicle{}, nil
+        }</span>
+
+        <span class="cov0" title="0">return vehicleModel.ToEntity(), nil</span>
+}
+
+func (repository vehicleRepository) Create(vehicle entities.Vehicle) (entities.Vehicle, error) <span class="cov0" title="0">{
+        vehicleModel := models.Vehicle{}.FromEntity(vehicle)
+
+        if err := repository.db.Create(&amp;vehicleModel).Error; err != nil </span><span class="cov0" title="0">{
+                return entities.Vehicle{}, err
+        }</span>
+
+        <span class="cov0" title="0">return vehicleModel.ToEntity(), nil</span>
+}
+
+func (repository vehicleRepository) Update(vehicle entities.Vehicle) (entities.Vehicle, error) <span class="cov0" title="0">{
+        vehicleModel := models.Vehicle{}.FromEntity(vehicle)
+
+        if err := repository.db.Updates(&amp;vehicleModel).Error; err != nil </span><span class="cov0" title="0">{
+                return entities.Vehicle{}, err
+        }</span>
+
+        <span class="cov0" title="0">return vehicleModel.ToEntity(), nil</span>
+}
+
+func (repository vehicleRepository) Delete(id string) error <span class="cov0" title="0">{
+        vehicleModel := models.Vehicle{}
+
+        if err := repository.db.Delete(&amp;vehicleModel, &amp;id).Error; err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file35" style="display: none">package routes
+
+import (
+        authHandler "go-carbon-tracker/handlers/auth"
+        tripHandler "go-carbon-tracker/handlers/trip"
+        vehicleHandler "go-carbon-tracker/handlers/vehicle"
+        "go-carbon-tracker/middlewares"
+        authRepo "go-carbon-tracker/repositories/auth"
+        tripRepo "go-carbon-tracker/repositories/trip"
+        vehicleRepo "go-carbon-tracker/repositories/vehicle"
+        authUsecase "go-carbon-tracker/usecases/auth"
+        tripUsecase "go-carbon-tracker/usecases/trip"
+        vehicleUsecase "go-carbon-tracker/usecases/vehicle"
+        "os"
+        "time"
+
+        echojwt "github.com/labstack/echo-jwt/v4"
+        "github.com/labstack/echo/v4"
+        "github.com/labstack/echo/v4/middleware"
+        "gorm.io/gorm"
+)
+
+func InitRoutes(e *echo.Echo, db *gorm.DB) <span class="cov0" title="0">{
+        loggerConfig := middlewares.LoggerConfig{
+                Format: `[${time_rfc3339}] ${status} ${method} ${host}${path} ${latency_human}` + "\n",
+        }
+
+        loggerMiddleware := loggerConfig.Init()
+
+        e.Use(loggerMiddleware)
+
+        e.Use(middleware.Recover())
+
+        rateLimiterConfig := middlewares.RateLimiterConfig{
+                Rate:      10,
+                Burst:     30,
+                ExpiresIn: 3 * time.Minute,
+        }
+
+        rateLimiterMiddleware := rateLimiterConfig.Init()
+
+        e.Use(rateLimiterMiddleware)
+
+        customValidator := middlewares.InitValidator()
+
+        e.Validator = customValidator
+
+        e.Pre(middleware.RemoveTrailingSlash())
+
+        jwtConfig := middlewares.JWTConfig{
+                SecretKey:       os.Getenv("JWT_SCRET_KEY"),
+                ExpiresDuration: 1,
+        }
+
+        authMiddlewareConfig := jwtConfig.Init()
+
+        useAuthRoute(e, db, &amp;jwtConfig)
+
+        useVehicleRoute(e, db, authMiddlewareConfig)
+
+        useTripRoute(e, db, authMiddlewareConfig)
+}</span>
+
+func useAuthRoute(e *echo.Echo, db *gorm.DB, jwtConfig *middlewares.JWTConfig) <span class="cov0" title="0">{
+        repository := authRepo.NewAuthRepository(db)
+        usecase := authUsecase.NewAuthUsecase(repository, jwtConfig)
+        handler := authHandler.NewAuthHandler(usecase)
+
+        auth := e.Group("/api/v1")
+        auth.POST("/login", handler.Login)
+        auth.POST("/register", handler.Register)
+}</span>
+
+func useVehicleRoute(e *echo.Echo, db *gorm.DB, authMiddlewareConfig echojwt.Config) <span class="cov0" title="0">{
+        repository := vehicleRepo.NewVehicleRepository(db)
+        usecase := vehicleUsecase.NewVehicleUsecase(repository)
+        handler := vehicleHandler.NewVehicleHandler(usecase)
+
+        vehicles := e.Group("/api/v1/vehicles", echojwt.WithConfig(authMiddlewareConfig))
+        vehicles.GET("", handler.GetAll)
+        vehicles.GET("/:id", handler.GetByID)
+        vehicles.POST("", handler.Create)
+        vehicles.PUT("/:id", handler.Update)
+        vehicles.DELETE("/:id", handler.Delete)
+}</span>
+
+func useTripRoute(e *echo.Echo, db *gorm.DB, authMiddlewareConfig echojwt.Config) <span class="cov0" title="0">{
+        vehicleRepository := vehicleRepo.NewVehicleRepository(db)
+        tripRepository := tripRepo.NewTripRepository(db)
+        usecase := tripUsecase.NewTripUsecase(tripRepository, vehicleRepository)
+        handler := tripHandler.NewTripHandler(usecase)
+
+        trips := e.Group("/api/v1/trips", echojwt.WithConfig(authMiddlewareConfig))
+        trips.GET("", handler.GetAll)
+        trips.GET("/:id", handler.GetByID)
+        trips.POST("", handler.Create)
+        trips.PUT("/:id", handler.Update)
+        trips.DELETE("/:id", handler.Delete)
+}</span>
+</pre>
+		
+		<pre class="file" id="file36" style="display: none">package auth
+
+import (        
+        "go-carbon-tracker/constants"
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/middlewares"
+        "go-carbon-tracker/repositories/auth"
+        "go-carbon-tracker/utils"
+)
+
+type authUsecase struct {
+        repository auth.AuthRepository
+        jwtAuth    *middlewares.JWTConfig
+}
+
+func NewAuthUsecase(r auth.AuthRepository, jwtAuth *middlewares.JWTConfig) *authUsecase <span class="cov8" title="1">{
+        return &amp;authUsecase{
+                repository: r,
+                jwtAuth:    jwtAuth,
+        }
+}</span>
+
+func (usecase authUsecase) Login(user entities.User) (entities.User, error) <span class="cov8" title="1">{
+        result, err := usecase.repository.Login(user)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return entities.User{}, err
+        }</span>
+
+        <span class="cov8" title="1">match, err := utils.ComparePassword(user.Password, result.Password)
+
+        isFailed := err != nil || !match
+        if isFailed </span><span class="cov8" title="1">{
+                return entities.User{}, constants.Err_INVALID_PASSWORD
+        }</span>
+
+        <span class="cov8" title="1">token, err := usecase.jwtAuth.GenerateToken(result.ID)
+        if err != nil </span><span class="cov0" title="0">{
+                return entities.User{}, err
+        }</span>
+
+        <span class="cov8" title="1">result.Token = token
+
+        return result, nil</span>
+}
+
+func (usecase authUsecase) Register(user entities.User) (entities.User, error) <span class="cov8" title="1">{
+        config := &amp;utils.ArgonConfig{
+                Memory:     64 * 1024,
+                Iterations: 3,
+                Pararelism: 2,
+                SaltLength: 16,
+                KeyLength:  32,
+        }
+
+        var err error
+        user.Password, err = utils.CreatePassword(user.Password, config)
+        if err != nil </span><span class="cov0" title="0">{
+                return entities.User{}, err
+        }</span>
+
+        <span class="cov8" title="1">result, err := usecase.repository.Register(user)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return entities.User{}, err
+        }</span>
+
+        <span class="cov8" title="1">return result, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file37" style="display: none">package trip
+
+import (
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/repositories/trip"
+        "go-carbon-tracker/repositories/vehicle"
+        "go-carbon-tracker/utils"
+)
+
+type tripUsecase struct {
+        tripRepository    trip.TripRepository
+        vehicleRepository vehicle.VehicleRepository
+}
+
+func NewTripUsecase(tripRepository trip.TripRepository, vehicleRepository vehicle.VehicleRepository) *tripUsecase <span class="cov8" title="1">{
+        return &amp;tripUsecase{
+                tripRepository:    tripRepository,
+                vehicleRepository: vehicleRepository,
+        }
+}</span>
+
+func (usecase tripUsecase) GetAll(filter entities.Filter) ([]entities.Trip, entities.Pagination, error) <span class="cov8" title="1">{
+        return usecase.tripRepository.GetAll(filter)
+}</span>
+
+func (usecase tripUsecase) GetByID(id string) (entities.Trip, error) <span class="cov8" title="1">{
+        return usecase.tripRepository.GetByID(id)
+}</span>
+
+func (usecase tripUsecase) Create(trip entities.Trip) (entities.Trip, error) <span class="cov8" title="1">{
+        vehicle, err := usecase.vehicleRepository.GetByID(trip.VehicleID)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return entities.Trip{}, err
+        }</span>
+
+        // Get Coordinates
+        <span class="cov0" title="0">lat1, lng1, err := utils.GetCoordinates(trip.StartLocation.Address)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return entities.Trip{}, err
+        }</span>
+
+        <span class="cov0" title="0">trip.StartLocation.Latitude = lat1
+        trip.StartLocation.Longitude = lng1
+
+        lat2, lng2, err := utils.GetCoordinates(trip.EndLocation.Address)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return entities.Trip{}, err
+        }</span>
+
+        <span class="cov0" title="0">trip.EndLocation.Latitude = lat2
+        trip.EndLocation.Longitude = lng2
+
+        // Get Distances
+        distance, err := utils.GetDistances(lat1, lng1, lat2, lng2)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return entities.Trip{}, err
+        }</span>
+
+        <span class="cov0" title="0">trip.DistanceKM = distance
+
+        trip.CarbonEmission = vehicle.EmissionFactor * float32(distance)
+
+        // Get Tips From Gemini
+        trip.Tips = utils.GetTipsFromGemini(trip)
+
+        return usecase.tripRepository.Create(trip)</span>
+}
+
+func (usecase tripUsecase) Update(trip entities.Trip) (entities.Trip, error) <span class="cov8" title="1">{
+        tripData, err := usecase.tripRepository.GetByID(trip.ID)
+
+        if err != nil </span><span class="cov8" title="1">{
+                return entities.Trip{}, err
+        }</span>
+
+        // Get Coordinates
+        <span class="cov0" title="0">lat1, lng1, err := utils.GetCoordinates(trip.StartLocation.Address)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return entities.Trip{}, err
+        }</span>
+
+        <span class="cov0" title="0">tripData.StartLocation.Address = trip.StartLocation.Address
+        tripData.StartLocation.Latitude = lat1
+        tripData.StartLocation.Longitude = lng1
+
+        lat2, lng2, err := utils.GetCoordinates(trip.EndLocation.Address)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return entities.Trip{}, err
+        }</span>
+
+        <span class="cov0" title="0">tripData.EndLocation.Address = trip.EndLocation.Address
+        tripData.EndLocation.Latitude = lat2
+        tripData.EndLocation.Longitude = lng2
+
+        // Get Distances
+        distance, err := utils.GetDistances(lat1, lng1, lat2, lng2)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return entities.Trip{}, err
+        }</span>
+
+        <span class="cov0" title="0">tripData.DistanceKM = distance
+
+        tripData.CarbonEmission = tripData.Vehicle.EmissionFactor * float32(distance)
+
+        // Get Tips From Gemini
+        tripData.Tips = utils.GetTipsFromGemini(tripData)
+
+        return usecase.tripRepository.Update(tripData)</span>
+}
+
+func (usecase tripUsecase) Delete(id string) error <span class="cov8" title="1">{
+        return usecase.tripRepository.Delete(id)
+}</span>
+</pre>
+		
+		<pre class="file" id="file38" style="display: none">package vehicle
+
+import (
+        "go-carbon-tracker/entities"
+        "go-carbon-tracker/repositories/vehicle"
+        "go-carbon-tracker/utils"
+)
+
+type vehicleUsecase struct {
+        repository vehicle.VehicleRepository
+}
+
+func NewVehicleUsecase(r vehicle.VehicleRepository) *vehicleUsecase <span class="cov8" title="1">{
+        return &amp;vehicleUsecase{
+                repository: r,
+        }
+}</span>
+
+func (usecase vehicleUsecase) GetAll(filter entities.Filter) ([]entities.Vehicle, entities.Pagination, error) <span class="cov8" title="1">{
+        return usecase.repository.GetAll(filter)
+}</span>
+
+func (usecase vehicleUsecase) GetByID(id string) (entities.Vehicle, error) <span class="cov8" title="1">{
+        return usecase.repository.GetByID(id)
+}</span>
+
+func (usecase vehicleUsecase) Create(vehicle entities.Vehicle) (entities.Vehicle, error) <span class="cov8" title="1">{
+        co2Factor := utils.GetCO2Factor(vehicle.FuelType)
+
+        energyConsume := utils.GetEnergyConsume(vehicle.VehicleType)
+
+        vehicle.EmissionFactor = co2Factor * energyConsume
+
+        return usecase.repository.Create(vehicle)
+}</span>
+
+func (usecase vehicleUsecase) Update(vehicle entities.Vehicle) (entities.Vehicle, error) <span class="cov8" title="1">{
+        co2Factor := utils.GetCO2Factor(vehicle.FuelType)
+
+        energyConsume := utils.GetEnergyConsume(vehicle.VehicleType)
+
+        vehicle.EmissionFactor = co2Factor * energyConsume
+
+        return usecase.repository.Update(vehicle)
+}</span>
+
+func (usecase vehicleUsecase) Delete(id string) error <span class="cov8" title="1">{
+        return usecase.repository.Delete(id)
+}</span>
+</pre>
+		
+		<pre class="file" id="file39" style="display: none">package utils
+
+import (
+        "go-carbon-tracker/constants"
+        "go-carbon-tracker/constants/enums"
+)
+
+func GetCO2Factor(fuelType enums.FuelType) float32 <span class="cov8" title="1">{
+        switch fuelType </span>{
+        case enums.PREMIUM:<span class="cov8" title="1">
+                return constants.CO2_FACTOR_FOR_PREMIUM_FUEL</span>
+        case enums.SOLAR:<span class="cov0" title="0">
+                return constants.CO2_FACTOR_FOR_SOLAR_FUEL</span>
+        default:<span class="cov0" title="0">
+                return 0</span>
+        }
+}
+
+func GetEnergyConsume(vehicleType enums.VehicleType) float32 <span class="cov8" title="1">{
+        switch vehicleType </span>{
+        case enums.MOTOR:<span class="cov8" title="1">
+                return constants.ENERGY_CONSUME_FOR_MOTOR</span>
+        case enums.MOBIL:<span class="cov0" title="0">
+                return constants.ENERGY_CONSUME_FOR_MOBIL</span>
+        case enums.BUS:<span class="cov0" title="0">
+                return constants.ENERGY_CONSUME_FOR_BUS</span>
+        case enums.TRUK:<span class="cov0" title="0">
+                return constants.ENERGY_CONSUME_FOR_TRUK</span>
+        default:<span class="cov0" title="0">
+                return 0</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file40" style="display: none">package utils
+
+import (
+        "go-carbon-tracker/constants"
+        "go-carbon-tracker/entities"        
+        "strconv"
+        "strings"
+        "time"
+
+        "github.com/labstack/echo/v4"
+)
+
+func GetFilter(c echo.Context) (entities.Filter, error) <span class="cov0" title="0">{
+        var startDate, endDate time.Time
+
+        page, err := strconv.Atoi(c.QueryParam("page"))
+        if err != nil || page &lt; 1 </span><span class="cov0" title="0">{
+                page = 1
+        }</span>
+
+        <span class="cov0" title="0">limit, err := strconv.Atoi(c.QueryParam("limit"))
+        if err != nil || limit &lt; 1 </span><span class="cov0" title="0">{
+                limit = 10
+        }</span>
+
+        <span class="cov0" title="0">search := c.QueryParam("search")
+
+        sortBy := c.QueryParam("sort_by")
+        if sortBy == "" </span><span class="cov0" title="0">{
+                sortBy = "created_at"
+        }</span>
+
+        <span class="cov0" title="0">sort := strings.ToUpper(c.QueryParam("sort"))
+        if sort == "" </span><span class="cov0" title="0">{
+                sort = "ASC"
+        }</span>
+
+        <span class="cov0" title="0">startDateStr := c.QueryParam("start_date")
+
+        endDateStr := c.QueryParam("end_date")
+
+        if startDateStr != "" </span><span class="cov0" title="0">{
+                startDate, err = time.Parse("2006-01-02", startDateStr)
+
+                if err != nil </span><span class="cov0" title="0">{
+                        return entities.Filter{}, constants.Err_INVALID_START_DATE_FORMAT
+                }</span>
+        }
+
+        <span class="cov0" title="0">if endDateStr != "" </span><span class="cov0" title="0">{
+                endDate, err = time.Parse("2006-01-02", endDateStr)
+
+                if err != nil </span><span class="cov0" title="0">{
+                        return entities.Filter{}, constants.Err_INVALID_END_DATE_FORMAT
+                }</span>
+        }
+
+        <span class="cov0" title="0">params := entities.Filter{
+                Page:      page,
+                Limit:     limit,
+                Search:    search,
+                Sort:      sort,
+                SortBy:    sortBy,
+                StartDate: startDate,
+                EndDate:   endDate,
+        }
+
+        return params, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file41" style="display: none">package utils
+
+import (
+        "context"
+        "fmt"
+        "go-carbon-tracker/entities"
+        "log"
+        "os"
+        "strings"
+
+        "github.com/google/generative-ai-go/genai"
+        "google.golang.org/api/option"
+)
+
+func GetTipsFromGemini(trip entities.Trip) (result string) <span class="cov0" title="0">{
+        ctx := context.Background()
+
+        client, err := genai.NewClient(ctx, option.WithAPIKey(os.Getenv("GEMINI_API_KEY")))
+
+        if err != nil </span><span class="cov0" title="0">{
+                log.Fatal(err)
+        }</span>
+
+        <span class="cov0" title="0">defer client.Close()
+
+        journey := fmt.Sprintf(
+                "Dalam perjalanan saya dari %s menuju %s sejauh %d km menggunakan %s berbahan bakar %s menghasilkan emisi karbon sebanyak %f gram.",
+                trip.StartLocation.Address,
+                trip.EndLocation.Address,
+                int(trip.DistanceKM),
+                trip.Vehicle.VehicleType,
+                trip.Vehicle.FuelType,
+                trip.CarbonEmission,
+        )
+
+        prompt := "Berdasarkan emisi karbon yang dihasilkan, apa pendapatmu? berikan tips. Sajikan jawaban pendek dalam 1 paragraf saja dan sertakan perjalanan saya!"
+
+        model := client.GenerativeModel("gemini-1.5-flash")
+
+        resp, err := model.GenerateContent(ctx,
+                genai.Text(journey),
+                genai.Text(prompt),
+        )
+
+        if err != nil </span><span class="cov0" title="0">{
+                log.Fatal(err)
+        }</span>
+
+        <span class="cov0" title="0">for _, cand := range resp.Candidates </span><span class="cov0" title="0">{
+                if cand.Content != nil </span><span class="cov0" title="0">{
+                        for _, part := range cand.Content.Parts </span><span class="cov0" title="0">{
+                                result += fmt.Sprintf("%s", part)
+                        }</span>
+                }
+        }
+
+        <span class="cov0" title="0">result = strings.ReplaceAll(result, "\n", "")
+
+        return result</span>
+}
+</pre>
+		
+		<pre class="file" id="file42" style="display: none">package utils
+
+import (
+        "go-carbon-tracker/constants"
+
+        "context"
+        "fmt"
+        "os"
+
+        "googlemaps.github.io/maps"
+)
+
+func GetDistances(lat1, lng1, lat2, lng2 float64) (int, error) <span class="cov0" title="0">{
+        c, err := maps.NewClient(maps.WithAPIKey(os.Getenv("GOOGLE_MAPS_API_KEY")))
+        if err != nil </span><span class="cov0" title="0">{
+                return 0, err
+        }</span>
+
+        <span class="cov0" title="0">origins := []string{fmt.Sprintf("%f,%f", lat1, lng1)}
+        destinations := []string{fmt.Sprintf("%f,%f", lat2, lng2)}
+
+        req := &amp;maps.DistanceMatrixRequest{
+                Origins:      origins,
+                Destinations: destinations,
+        }
+
+        result, err := c.DistanceMatrix(context.Background(), req)
+        if err != nil </span><span class="cov0" title="0">{
+                return 0, err
+        }</span>
+
+        <span class="cov0" title="0">if len(result.Rows) &gt; 0 &amp;&amp; len(result.Rows[0].Elements) &gt; 0 </span><span class="cov0" title="0">{
+                distance := result.Rows[0].Elements[0].Distance.Meters / 1000
+
+                return distance, nil
+        }</span>
+
+        <span class="cov0" title="0">return 0, constants.Err_GET_DISTANCE_FAILED</span>
+}
+
+func GetCoordinates(address string) (float64, float64, error) <span class="cov0" title="0">{
+        c, err := maps.NewClient(maps.WithAPIKey(os.Getenv("GOOGLE_MAPS_API_KEY")))
+        if err != nil </span><span class="cov0" title="0">{
+                return 0, 0, err
+        }</span>
+
+        <span class="cov0" title="0">req := &amp;maps.GeocodingRequest{
+                Address: address,
+        }
+
+        result, err := c.Geocode(context.Background(), req)
+        if err != nil </span><span class="cov0" title="0">{
+                return 0, 0, err
+        }</span>
+
+        <span class="cov0" title="0">if len(result) &gt; 0 </span><span class="cov0" title="0">{
+                lat := result[0].Geometry.Location.Lat
+                lng := result[0].Geometry.Location.Lng
+                return lat, lng, nil
+        }</span>
+
+        <span class="cov0" title="0">return 0, 0, constants.Err_GET_COORDINATES_FAILED</span>
+}
+</pre>
+		
+		<pre class="file" id="file43" style="display: none">package utils
+
+import (
+        "crypto/rand"
+        "crypto/subtle"
+        "encoding/base64"
+        "fmt"
+        "go-carbon-tracker/constants"
+        "strings"
+
+        "golang.org/x/crypto/argon2"
+)
+
+type ArgonConfig struct {
+        Memory     uint32
+        Iterations uint32
+        Pararelism uint8
+        SaltLength uint32
+        KeyLength  uint32
+}
+
+func CreatePassword(password string, config *ArgonConfig) (string, error) <span class="cov8" title="1">{
+        salt, err := generateRandomBytes(config.SaltLength)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">hash := argon2.IDKey([]byte(password), salt, config.Iterations, config.Memory, config.Pararelism, config.KeyLength)
+
+        b64Salt := base64.RawStdEncoding.EncodeToString(salt)
+        b64Hash := base64.RawStdEncoding.EncodeToString(hash)
+
+        encodedHash := fmt.Sprintf("$argon2id$v=%d$m=%d,t=%d,p=%d$%s$%s", argon2.Version, config.Memory, config.Iterations, config.Pararelism, b64Salt, b64Hash)
+
+        return encodedHash, nil</span>
+}
+
+func ComparePassword(password, encodedHash string) (bool, error) <span class="cov8" title="1">{
+        p, salt, hash, err := decodeHash(encodedHash)
+        if err != nil </span><span class="cov0" title="0">{
+                return false, err
+        }</span>
+
+        <span class="cov8" title="1">otherHash := argon2.IDKey([]byte(password), salt, p.Iterations, p.Memory, p.Pararelism, p.KeyLength)
+
+        if subtle.ConstantTimeCompare(hash, otherHash) == 1 </span><span class="cov8" title="1">{
+                return true, nil
+        }</span>
+
+        <span class="cov8" title="1">return false, nil</span>
+}
+
+func generateRandomBytes(n uint32) ([]byte, error) <span class="cov8" title="1">{
+        b := make([]byte, n)
+        _, err := rand.Read(b)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return b, nil</span>
+}
+
+func decodeHash(encodedHash string) (p *ArgonConfig, salt, hash []byte, err error) <span class="cov8" title="1">{
+        vals := strings.Split(encodedHash, "$")
+        if len(vals) != 6 </span><span class="cov0" title="0">{
+                return nil, nil, nil, constants.Err_INVALID_HASH
+        }</span>
+
+        <span class="cov8" title="1">var version int
+        _, err = fmt.Sscanf(vals[2], "v=%d", &amp;version)
+
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, nil, nil, err
+        }</span>
+
+        <span class="cov8" title="1">if version != argon2.Version </span><span class="cov0" title="0">{
+                return nil, nil, nil, constants.Err_INCOMPATIBLE_VERSION
+        }</span>
+
+        <span class="cov8" title="1">p = &amp;ArgonConfig{}
+        _, err = fmt.Sscanf(vals[3], "m=%d,t=%d,p=%d", &amp;p.Memory, &amp;p.Iterations, &amp;p.Pararelism)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, nil, nil, err
+        }</span>
+
+        <span class="cov8" title="1">salt, err = base64.RawStdEncoding.Strict().DecodeString(vals[4])
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, nil, nil, err
+        }</span>
+        <span class="cov8" title="1">p.SaltLength = uint32(len(salt))
+
+        hash, err = base64.RawStdEncoding.Strict().DecodeString(vals[5])
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, nil, nil, err
+        }</span>
+        <span class="cov8" title="1">p.KeyLength = uint32(len(hash))
+
+        return p, salt, hash, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file44" style="display: none">package utils
+
+import (
+        c "go-carbon-tracker/constants"
+        "net/http"
+)
+
+func GetStatusCodeBySuccessMessage(msg string) int <span class="cov0" title="0">{
+        switch msg </span>{
+        case c.CREATE_TRIP_SUCCESS, c.CREATE_VEHICLE_SUCCESS, c.REGISTER_SUCCESS:<span class="cov0" title="0">
+                return http.StatusCreated</span>
+        default:<span class="cov0" title="0">
+                return http.StatusOK</span>
+        }
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
