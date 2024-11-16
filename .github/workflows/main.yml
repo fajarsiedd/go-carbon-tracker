@@ -65,7 +65,7 @@ jobs:
               sudo docker pull $IMAGE_URI
 
               # Run the new container
-              sudo docker run -d --name carbon-tracker -p 8000:8000 $IMAGE_URI
+              sudo docker run -d --name carbon-tracker -p 1323:1323 $IMAGE_URI
             EOF
 
         - name: Clean up PEM file
